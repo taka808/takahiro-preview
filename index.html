@@ -79,7 +79,8 @@ body::before{
   font-size:clamp(30px,4.6vw,52px);font-weight:500;letter-spacing:.005em;
   margin:0 0 10px;line-height:1.05;text-shadow:0 2px 16px rgba(0,0,0,.85)
 }
-.role{font-size:13px;font-weight:300;letter-spacing:.3em;color:rgba(245,240,232,.72);text-shadow:0 1px 8px rgba(0,0,0,.75)}
+/* 肩書きは名前ブロック(=名前幅に収縮)内で中央寄せ＝名前の中心に揃う（2026-07-27 HASHIRA） */
+.role{font-size:13px;font-weight:300;letter-spacing:.3em;color:rgba(245,240,232,.72);text-shadow:0 1px 8px rgba(0,0,0,.75);text-align:center}
 .role b{color:var(--accent);font-weight:500}
 
 /* quote block: 箱なし・写真に直接。PC=顔を避け下部（Join the mailing list の直上）へ margin-top:auto で下寄せ、left/right auto で横中央 */
@@ -152,10 +153,10 @@ footer a:hover{color:var(--dim)}
 
 /* ── mobile: 全面写真の上にテキストを重ねたまま1画面に収める ── */
 @media (max-width:640px){
-  /* モバイル: 引用をナビ(学ぶ)の下へ確実に下げる＝flex-start＋quote margin-topで押し下げ、フォームはmargin-top:autoで中央下にピン（2026-07-27 HASHIRA「学ぶとかぶる→少し下」） */
+  /* モバイル: 引用を「Join the mailing list」の直上（下部）へ＝quote margin-top:autoで引用+フォームを下部にまとめる。これで学ぶとも完全に離れる（2026-07-27 HASHIRA「引用はJoin直上」） */
   .hero{padding:clamp(26px,4.5vh,40px) var(--gutter) clamp(22px,3vh,32px);justify-content:flex-start}
-  .quote-block{margin:clamp(190px,32vh,255px) auto 0}
-  .form-block{align-self:center;text-align:center;margin-top:auto}
+  .quote-block{margin:auto auto clamp(16px,2.4vh,26px)}
+  .form-block{align-self:center;text-align:center}
   .form{margin:0 auto}
   .hero-bg{object-position:center 58%}
   /* スマホ: 名前=左上大きく → その直下に縦積みナビを左寄せ（mockup 12628） */
