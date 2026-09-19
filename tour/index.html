@@ -19,7 +19,7 @@
 <!-- Google Fonts: Poppins (Alaya 02Design欧文書体) + Shippori Mincho（和文） -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600&family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
 <!-- 題字の下の 夜打楽 だけに使う（本拠地 yatara/index.html の .jp-sub と同じ書体）。3文字だけ読み込む -->
 
 <!-- Kit form handler: フォーム送信を AJAX で処理（LP内で完結） -->
@@ -137,6 +137,8 @@ section {
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  min-height: clamp(520px, 80vh, 900px);   /* 写真を見せる高さ（2026-09-19） */
   padding: 0;
   overflow: hidden;
 }
@@ -155,7 +157,7 @@ section {
   background-size: auto 104%;
   background-position: right -40px center;
   background-repeat: no-repeat;
-  opacity: .42;
+  opacity: 1;
   pointer-events: none;
 }
 .hero::after {           /* 文字の可読性のための暗幕 */
@@ -190,6 +192,7 @@ section {
 .hero-foot {
   position: relative;
   z-index: 3;
+  margin-top: clamp(22px, 5vh, 56px);      /* 題字（夜打楽）のすぐ下＝写真の中ほど */
   padding: clamp(20px, 3vh, 32px) var(--gutter) clamp(40px, 6vh, 64px);
   display: flex;
   align-items: flex-start;
@@ -584,13 +587,13 @@ footer {
   body { font-size: 14px; }
 
   /* スマホ: 模様は上の右だけに小さく出し、文字が始まる手前で消す（2026-09-19） */
-  .hero::before {
-    background-size: auto 62%;
-    background-position: right -24px top 6%;
-    opacity: .34;
+  .hero::before {                      /* スマホは文字が画面幅いっぱいまで来るので、模様は文字より下に置く */
+    background-size: auto 46%;
+    background-position: right -18px bottom 4%;
+    opacity: 1;
   }
   .hero::after {
-    background: linear-gradient(180deg, rgba(22,22,22,.34) 0%, rgba(22,22,22,.14) 26%, rgba(22,22,22,.86) 52%, rgba(22,22,22,.98) 64%, var(--bg) 100%);
+    background: linear-gradient(180deg, rgba(22,22,22,.34) 0%, rgba(22,22,22,.12) 22%, rgba(22,22,22,.62) 46%, rgba(22,22,22,.72) 62%, rgba(22,22,22,.92) 88%, var(--bg) 100%);
   }
 
   .ticket-row {
@@ -621,7 +624,7 @@ footer {
 }
 
 /* ===== 2026-10 追加（6月の型に足したもの） ===== */
-.hero-title-text{aspect-ratio:16/9;line-height:1;display:flex;flex-direction:column;align-items:flex-start;padding:clamp(28px,6vw,96px) var(--gutter) 0}
+.hero-title-text{line-height:1;display:flex;flex-direction:column;align-items:flex-start;padding:clamp(28px,6vw,96px) var(--gutter) 0}
 /* 題字: YATARA = Alaya のブランドカードの模様と同じ、端の粗い紙の質感に加工した画像（Poppins 500 を描画→端を加工）。
    下に行くほど薄く消える＝ヘッダーの模様（.hero::after：上はそのまま、下へ行くほど暗くなる）と同じ見え方。
    模様と同じ数値（55%まで不透明→下端15%）を当てると、文字は高さが220pxしかないので中ほどに上下2色の境目が出た（2026-09-19 4案比較 A）。
@@ -630,7 +633,7 @@ footer {
 .hero-title-text img{max-width:none}
 /* 題字 YATARA: Poppins 500 を描き、最初の A の横棒を赤い丸に置き換えた画像（access art studio のロゴの o と同じ考え方）。下へ薄くなるグラデは画像に焼き込み済み（赤い丸は薄くしない） */
 .hero-title-text .t-main{display:block;height:clamp(64px,15vw,220px);width:auto;max-width:none}
-.hero-title-text .t-sub{display:block;height:clamp(13.5px,1.8vw,25px);width:auto;max-width:none;margin-top:clamp(14px,1.8vw,26px);opacity:.85}
+.hero-title-text .t-sub{display:block;font-family:'Noto Sans JP',sans-serif;font-weight:300;font-size:clamp(15px,2vw,28px);letter-spacing:.62em;color:rgba(245,240,232,.85);margin-top:clamp(14px,1.8vw,26px)}
 .nb{display:inline-block}
 .live-photo{margin:0 0 clamp(28px,5vh,48px)}
 .live-photo img{display:block;width:100%;height:auto;filter:brightness(.9) contrast(1.05)}
@@ -656,7 +659,7 @@ footer {
 <!-- ===== HERO ===== -->
 <section class="hero">
   <img class="hero-photo" src="_assets/live.webp" width="1600" height="1067" alt="ステージで演奏する Takahiro Izumikawa">
-  <h1 class="hero-title hero-title-text reveal r-2"><img class="t-main" src="_assets/title-yatara-redbar.webp" width="1765" height="440" alt="YATARA"><img class="t-sub" src="_assets/title-yataraku-red.webp" width="1133" height="140" alt="夜打楽"></h1>
+  <h1 class="hero-title hero-title-text reveal r-2"><img class="t-main" src="_assets/title-yatara-redbar.webp" width="1765" height="440" alt="YATARA"><span class="t-sub" lang="ja">夜　打　楽</span></h1>
   <div class="hero-foot">
     <div class="hero-foot-left">
       <p class="hero-meta reveal r-1">Takahiro Izumikawa &#9642; Japan Tour 2026</p>
