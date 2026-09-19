@@ -619,7 +619,8 @@ footer {
    上の2割は不透明、そこから下端で10%まで＝案 C を採用（画像の上下に余白があるので文字の下端は約25%）。
    夜打楽 は普通の文字で小さく（本拠地 yatara/index.html の .jp-sub と同じ組み方） */
 .hero-title-text img{max-width:none}
-.hero-title-text .t-main{display:block;font-family:'Poppins',sans-serif;font-weight:500;font-size:clamp(64px,15vw,220px);line-height:1;letter-spacing:.02em;color:var(--text);-webkit-mask-image:linear-gradient(180deg,#000 0%,#000 35%,rgba(0,0,0,.45) 100%);mask-image:linear-gradient(180deg,#000 0%,#000 35%,rgba(0,0,0,.45) 100%)}
+/* 題字 YATARA: Poppins 500 を描き、最初の A の中を赤い丸に置き換えた画像（access art studio のロゴの o と同じ考え方）。下へ薄くなるグラデは画像に焼き込み済み（赤い丸は薄くしない） */
+.hero-title-text .t-main{display:block;height:clamp(64px,15vw,220px);width:auto;max-width:none}
 .hero-title-text .t-sub{display:block;height:clamp(13.5px,1.8vw,25px);width:auto;max-width:none;margin-top:clamp(14px,1.8vw,26px);opacity:.85}
 .nb{display:inline-block}
 .live-photo{margin:0 0 clamp(28px,5vh,48px)}
@@ -637,7 +638,7 @@ footer {
 .hg-feed:empty{min-height:0}
 /* 320px などの狭い画面で公演日の3列目（Tokyo · YATARA Full Band）が画面外に出ないよう折り返す */
 /* 320px では題字の最後の A が背景の模様に重なるので、狭い画面だけ少し小さくする（2026-09-19） */
-@media (max-width:360px){.hero-title-text .t-main{font-size:56px}}
+@media (max-width:360px){.hero-title-text .t-main{height:56px}}
 @media (max-width:400px){.hero-subtitle{display:block}.hero-subtitle .m{margin-right:.45em}.hero-subtitle .d{margin-right:.55em}.hero-subtitle .c{display:inline;white-space:normal}.hero-subtitle .c::after{content:"\A";white-space:pre}}
 </style>
 </head>
@@ -645,7 +646,7 @@ footer {
 
 <!-- ===== HERO ===== -->
 <section class="hero">
-  <h1 class="hero-title hero-title-text reveal r-2"><span class="t-main" lang="en">YATARA</span><img class="t-sub" src="_assets/title-yataraku-red.webp" width="1133" height="140" alt="夜打楽"></h1>
+  <h1 class="hero-title hero-title-text reveal r-2"><img class="t-main" src="_assets/title-yatara-reddot.webp" width="1765" height="440" alt="YATARA"><img class="t-sub" src="_assets/title-yataraku-red.webp" width="1133" height="140" alt="夜打楽"></h1>
   <div class="hero-foot">
     <div class="hero-foot-left">
       <p class="hero-meta reveal r-1">Takahiro Izumikawa &#9642; Japan Tour 2026</p>
@@ -736,8 +737,9 @@ footer {
       <h2 class="entry-title reveal r-2"><span class="en accent">Crew</span>に加わる</h2>
       <p class="entry-jp reveal r-3">クルーとして、制作の内側から目撃する。</p>
       <p class="entry-body reveal r-3">
-        10月30日 晴れたら空に豆まいて公演当日のサウンドチェックと、<br>
-        舞台裏・リハ動画・当日の演奏動画 — クルーにだけ届くデジタルコンテンツ。
+        <span class="nb">10月30日 晴れたら空に豆まいて</span><span class="nb">公演当日のサウンドチェック見学や</span><br>
+        <span class="nb">舞台裏・リハ動画・演奏動画など、</span><br>
+        <span class="nb">クルーにだけ届くデジタルコンテンツ。</span>
       </p>
       <span class="crew-cta is-pending reveal r-4">Join the Crew — 近日販売</span>
     </article>
