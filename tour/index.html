@@ -624,6 +624,8 @@ footer {
 .crew-note{font-family:var(--font-jp);font-size:14px;line-height:1.95;color:rgba(245,240,232,.72);max-width:560px;margin:0 0 24px}
 .crew-cta.is-pending{color:var(--text-dim);border-color:var(--rule);cursor:default}
 .crew-cta.is-pending:hover{background:none;color:var(--text-dim)}
+/* hitori-goto: 10月は先客の独り言が無いので、投稿0件のときは欄の高さを0にして空白を出さない */
+.hg-feed:empty{min-height:0}
 </style>
 </head>
 <body>
