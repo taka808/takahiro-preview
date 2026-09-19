@@ -21,7 +21,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
 <!-- 題字の下の 夜打楽 だけに使う（本拠地 yatara/index.html の .jp-sub と同じ書体）。3文字だけ読み込む -->
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&text=%E5%A4%9C%E6%89%93%E6%A5%BD&display=swap" rel="stylesheet">
 
 <!-- Kit form handler: フォーム送信を AJAX で処理（LP内で完結） -->
 <script src="https://f.convertkit.com/ckjs/ck.5.js" defer></script>
@@ -580,6 +579,10 @@ footer {
   .hero::before {
     background-image: url("_assets/header-mobile.jpg");
   }
+  /* 模様が名前・日付の行にかからないよう、文字が始まる手前で消す（2026-09-19） */
+  .hero::after {
+    background: linear-gradient(180deg, rgba(22,22,22,0) 0%, rgba(22,22,22,0) 26%, rgba(22,22,22,.86) 46%, rgba(22,22,22,.98) 58%, var(--bg) 100%);
+  }
 
   .ticket-row {
     grid-template-columns: 1fr;
@@ -616,8 +619,8 @@ footer {
    上の2割は不透明、そこから下端で10%まで＝案 C を採用（画像の上下に余白があるので文字の下端は約25%）。
    夜打楽 は普通の文字で小さく（本拠地 yatara/index.html の .jp-sub と同じ組み方） */
 .hero-title-text img{max-width:none}
-.hero-title-text .t-main{display:block;height:clamp(64px,15vw,220px);width:auto;-webkit-mask-image:linear-gradient(180deg,#000 0%,#000 20%,rgba(0,0,0,.10) 100%);mask-image:linear-gradient(180deg,#000 0%,#000 20%,rgba(0,0,0,.10) 100%)}
-.hero-title-text .t-sub{display:block;font-family:'Noto Sans JP',sans-serif;font-weight:300;font-size:clamp(15px,2vw,28px);letter-spacing:.62em;color:rgba(245,240,232,.8);margin-top:clamp(12px,1.6vw,24px)}
+.hero-title-text .t-main{display:block;font-family:'Poppins',sans-serif;font-weight:500;font-size:clamp(64px,15vw,220px);line-height:1;letter-spacing:.02em;color:var(--text);-webkit-mask-image:linear-gradient(180deg,#000 0%,#000 20%,rgba(0,0,0,.10) 100%);mask-image:linear-gradient(180deg,#000 0%,#000 20%,rgba(0,0,0,.10) 100%)}
+.hero-title-text .t-sub{display:block;height:clamp(15px,2vw,28px);width:auto;max-width:none;margin-top:clamp(12px,1.6vw,24px);opacity:.85}
 .nb{display:inline-block}
 .live-photo{margin:0 0 clamp(28px,5vh,48px)}
 .live-photo img{display:block;width:100%;height:auto;filter:brightness(.9) contrast(1.05)}
@@ -633,14 +636,14 @@ footer {
 /* hitori-goto: 10月は先客の独り言が無いので、投稿0件のときは欄の高さを0にして空白を出さない */
 .hg-feed:empty{min-height:0}
 /* 320px などの狭い画面で公演日の3列目（Tokyo · YATARA Full Band）が画面外に出ないよう折り返す */
-@media (max-width:400px){.hero-subtitle{grid-template-columns:max-content max-content minmax(0,1fr)}.hero-subtitle .c{white-space:normal}}
+@media (max-width:400px){.hero-subtitle{display:block}.hero-subtitle .m{margin-right:.45em}.hero-subtitle .d{margin-right:.55em}.hero-subtitle .c{display:inline;white-space:normal}.hero-subtitle .c::after{content:"\A";white-space:pre}}
 </style>
 </head>
 <body>
 
 <!-- ===== HERO ===== -->
 <section class="hero">
-  <h1 class="hero-title hero-title-text reveal r-2"><img class="t-main" src="_assets/title-yatara.webp" width="1765" height="440" alt="YATARA"><span class="t-sub" lang="ja">夜　打　楽</span></h1>
+  <h1 class="hero-title hero-title-text reveal r-2"><span class="t-main" lang="en">YATARA</span><img class="t-sub" src="_assets/title-yataraku-red.webp" width="1101" height="136" alt="夜打楽"></h1>
   <div class="hero-foot">
     <div class="hero-foot-left">
       <p class="hero-meta reveal r-1">Takahiro Izumikawa &#9642; Japan Tour 2026</p>
