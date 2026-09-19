@@ -11,6 +11,8 @@
 <meta property="og:url" content="https://takahiroizumikawa.com/tour/">
 <meta property="og:image" content="https://takahiroizumikawa.com/tour/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#161616">
+<link rel="canonical" href="https://takahiroizumikawa.com/tour/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -42,7 +44,7 @@ a{color:inherit}
              linear-gradient(to right,rgba(22,22,22,.55) 0%,rgba(22,22,22,0) 55%)}
 .hero-bg{display:block;width:100%;height:100%;object-fit:cover;object-position:62% 45%;filter:brightness(.78) contrast(1.05)}
 .hero-inner{position:relative;z-index:2;max-width:var(--max)}
-.meta{font-size:12px;letter-spacing:.24em;color:rgba(245,240,232,.8);margin-bottom:clamp(16px,2.6vh,24px);text-shadow:0 1px 12px rgba(0,0,0,.6)}
+.meta{font-size:clamp(13px,1.5vw,15px);font-weight:400;letter-spacing:.2em;color:rgba(245,240,232,.9);margin-bottom:clamp(16px,2.6vh,24px);text-shadow:0 1px 12px rgba(0,0,0,.6)}
 .catch{font-family:'Noto Sans JP',sans-serif;font-weight:400;font-size:clamp(28px,6.2vw,50px);line-height:1.45;letter-spacing:.06em;margin-bottom:clamp(22px,3.6vh,34px);text-shadow:0 2px 18px rgba(0,0,0,.55)}
 .sub{font-family:'Noto Sans JP',sans-serif;font-size:clamp(14px,1.7vw,16px);line-height:1.9;letter-spacing:.05em;color:rgba(245,240,232,.86);margin:-8px 0 clamp(20px,3vh,28px);text-shadow:0 1px 12px rgba(0,0,0,.6)}
 .dates{list-style:none;margin-bottom:clamp(26px,4vh,38px)}
@@ -50,13 +52,15 @@ a{color:inherit}
 .dates .d{font-weight:500;min-width:6.4em}
 .dates .d small{font-size:.72em;font-weight:400;color:var(--dim);margin-left:.4em;letter-spacing:.1em}
 .dates .p{color:rgba(245,240,232,.86)}
+.dates .soon{font-family:'Noto Sans JP',sans-serif;font-size:.8em;color:var(--dim);margin-left:.6em;letter-spacing:.04em}
 .jump{display:inline-block;font-size:14px;letter-spacing:.14em;text-decoration:none;border:1px solid rgba(245,240,232,.5);padding:13px 26px;transition:color .4s,border-color .4s}
 .jump:hover{color:var(--accent);border-color:var(--accent)}
 
 /* ── body blocks ── */
 .block{padding:clamp(56px,11vh,110px) var(--gutter) 0}
 .block>.inner{max-width:var(--max)}
-.eyebrow{font-size:12px;font-weight:400;letter-spacing:.4em;text-transform:uppercase;color:var(--dim);margin-bottom:clamp(22px,3.4vh,32px)}
+[hidden]{display:none!important}
+.tickets h2{margin-bottom:clamp(22px,3.4vh,30px)}
 .text-link{display:inline-block;margin:0 0 20px;font-size:14px;letter-spacing:.08em;color:var(--dim);text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:3px;transition:color .4s,border-color .4s}
 .text-link:hover{color:var(--accent);border-color:var(--accent)}
 
@@ -69,6 +73,7 @@ a{color:inherit}
 .show h3{font-size:clamp(20px,2.6vw,26px);font-weight:500;letter-spacing:.04em;line-height:1.4}
 .show .format{font-size:15px;letter-spacing:.08em;margin:4px 0 14px}
 .show .venue{font-size:15px;letter-spacing:.04em;color:rgba(245,240,232,.9)}
+.show .addr{font-family:'Noto Sans JP',sans-serif;font-size:12.5px;line-height:1.7;letter-spacing:.03em;color:var(--dim);margin-top:4px}
 .show .line{font-family:'Noto Sans JP',sans-serif;font-size:14.5px;line-height:1.9;letter-spacing:.04em;color:rgba(245,240,232,.8);margin:12px 0 10px}
 .show .detail{font-size:14px;letter-spacing:.05em;line-height:1.8;color:rgba(245,240,232,.86);margin-bottom:18px}
 .show .detail a{color:inherit}
@@ -77,8 +82,8 @@ a{color:inherit}
 .btn:hover{color:var(--accent);border-color:var(--accent)}
 
 /* crew */
-.crew h2,.log h2{font-family:'Noto Sans JP',sans-serif;font-weight:400;font-size:clamp(24px,3vw,28px);letter-spacing:.06em;margin-bottom:8px}
-.crew h2 .en,.log h2 .en{font-family:'Poppins',sans-serif;font-weight:500;letter-spacing:.02em}
+.tickets h2,.crew h2,.log h2{font-family:'Noto Sans JP',sans-serif;font-weight:400;font-size:clamp(24px,3vw,28px);letter-spacing:.06em;margin-bottom:8px}
+.tickets h2 .en,.crew h2 .en,.log h2 .en{font-family:'Poppins',sans-serif;font-weight:500;letter-spacing:.02em}
 .crew h2 .en{color:var(--accent)}
 .kicker{font-size:13px;letter-spacing:.08em;color:var(--dim);margin-bottom:20px}
 .crew p,.log p{font-family:'Noto Sans JP',sans-serif;font-size:15px;line-height:2;letter-spacing:.04em;color:rgba(245,240,232,.86)}
@@ -91,11 +96,14 @@ a{color:inherit}
 .log-form input[type="email"]:focus{border-color:rgba(245,240,232,.6)}
 .log-form input[type="email"]::placeholder{color:rgba(245,240,232,.62)}
 .log-form .btn:disabled{opacity:.45;cursor:default}
-.btn.pending{border-style:dashed;color:var(--dim);cursor:default}
-.btn.pending:hover{color:var(--dim);border-color:rgba(245,240,232,.55)}
+.pending-note{font-family:'Noto Sans JP',sans-serif;font-size:14px;line-height:1.9;letter-spacing:.04em;color:rgba(245,240,232,.86)}
+.pending-note a{color:inherit}
+.log-form label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.field-label{display:block;font-size:12px;letter-spacing:.08em;color:var(--dim);margin-top:24px}
+.log-form{margin-top:8px}
 .log-msg{font-family:'Noto Sans JP',sans-serif;font-size:13px;letter-spacing:.04em;line-height:1.8;margin-top:12px;color:#e08a8a}
+.log-msg.ok{font-size:15px;color:var(--text)}
 .log-msg:empty{display:none}
-.log-done .t{font-size:18px;font-weight:400;margin-top:24px}
 
 footer{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-top:clamp(72px,12vh,120px);padding:22px var(--gutter) 28px;border-top:1px solid var(--rule);font-size:12px;letter-spacing:.1em;color:var(--dim)}
 footer a{text-decoration:none;transition:color .4s}
@@ -116,8 +124,8 @@ footer a:hover{color:var(--accent)}
   .hero-inner{margin-top:-5svh}
   .dates li{gap:12px}
   .show{grid-template-columns:minmax(0,1fr);gap:18px}
-  .show figure{aspect-ratio:4/3}
-  .show img.osaka{object-position:center 74%}
+  .show figure{aspect-ratio:1/1}
+  .show img.osaka{object-position:center 40%}
   .btn{width:100%}
   .log-form{flex-direction:column}
 }
@@ -128,11 +136,11 @@ footer a:hover{color:var(--accent)}
 <section class="hero">
   <div class="hero-photo"><img class="hero-bg" src="hero.webp" width="1600" height="1067" alt="ステージでキーボードを弾く Takahiro Izumikawa"></div>
   <div class="hero-inner">
-    <p class="meta reveal r-1" lang="en">Takahiro Izumikawa · Japan Tour 2026</p>
+    <p class="meta reveal r-1" lang="en"><span class="nb">Takahiro Izumikawa ·</span> <span class="nb">Japan Tour 2026</span></p>
     <h1 class="catch reveal r-2"><span class="nb">分からなくていい。</span><br><span class="nb">心を揺さぶられに来て。</span></h1>
     <p class="sub reveal r-2"><span class="nb">ニューヨークを拠点にする</span><span class="nb">ピアニストの、日本での2夜。</span></p>
     <ul class="dates reveal r-3">
-      <li><span class="d" lang="en">10.26<small>Mon</small></span><span class="p" lang="en">Osaka · Piano Solo</span></li>
+      <li><span class="d" lang="en">10.26<small>Mon</small></span><span class="p"><span lang="en">Osaka · Piano Solo</span><span class="soon">チケット近日</span></span></li>
       <li><span class="d" lang="en">10.30<small>Fri</small></span><span class="p" lang="en">Tokyo · Band</span></li>
     </ul>
     <a class="jump reveal r-4" href="#tickets">チケット ↓</a>
@@ -141,7 +149,7 @@ footer a:hover{color:var(--accent)}
 
 <section class="block tickets" id="tickets">
   <div class="inner">
-    <h2 class="eyebrow" lang="en">Tickets</h2>
+    <h2><span class="en" lang="en">Tickets</span> を取る</h2>
 
     <article class="show">
       <figure><img class="osaka" src="osaka.webp" width="862" height="1150" alt="ピアノを弾く Takahiro Izumikawa" loading="lazy"></figure>
@@ -150,6 +158,7 @@ footer a:hover{color:var(--accent)}
         <h3>2026年10月26日（月）</h3>
         <p class="format">ピアノソロ</p>
         <p class="venue" lang="en">BLUE YARD</p>
+        <p class="addr">大阪市北区梅田3-2-123 イノゲート大阪内 バルチカ03（JR大阪駅直結）</p>
         <p class="line"><span class="nb">テーブル席で、</span><span class="nb">ピアノと向き合う夜。</span><span class="nb">気軽に、近くで。</span></p>
         <p class="detail">時間・料金・チケットは会場から近日公開。<br>決まったら <a href="#log">Log</a> でお知らせします。</p>
         <a class="btn" href="https://blue-yard.jp/" target="_blank" rel="noopener">会場ページ（BLUE YARD）↗&#xFE0E;</a>
@@ -162,10 +171,11 @@ footer a:hover{color:var(--accent)}
         <p class="city" lang="en">TOKYO</p>
         <h3>2026年10月30日（金）</h3>
         <p class="format">バンド</p>
-        <p class="venue">晴れたら空に豆まいて（代官山）</p>
+        <p class="venue">晴れたら空に豆まいて</p>
+        <p class="addr">東京都渋谷区代官山町20-20 モンシェリー代官山B2</p>
         <p class="line"><span class="nb">新しいジャンル YATARA の</span><span class="nb">お披露目。</span><span class="nb">バンドで鳴らす夜。</span></p>
         <a class="text-link" href="https://takahiroizumikawa.com/yatara/?lang=ja">YATARA とは ↗&#xFE0E;</a>
-        <p class="detail">OPEN 19:00 ／ チケット ¥6,500</p>
+        <p class="detail">OPEN 19:00<br>当日チケット ¥6,500 ／ MTM メンバー ¥4,500</p>
         <a class="btn" href="https://morethanmusicjapan.com/ja/collections/frontpage/products/261030sk" target="_blank" rel="noopener">チケット購入（More Than Music）↗&#xFE0E;</a>
       </div>
     </article>
@@ -175,11 +185,11 @@ footer a:hover{color:var(--accent)}
 <section class="block crew" id="crew">
   <div class="inner">
     <h2><span class="en" lang="en">Crew</span> に加わる</h2>
-    <p class="kicker"><span class="nb">リハーサル見学＋デジタルコンテンツ</span> ・ <span class="nb">数量限定</span></p>
+    <p class="kicker"><span class="nb">リハーサル見学＋デジタルコンテンツ</span> <span class="nb">・ 数量限定</span></p>
     <p>10月30日 晴れたら空に豆まいて 公演のリハーサル見学と、デジタルコンテンツ（舞台裏・リハ動画・当日の演奏動画）が届く、クルー特典のチケットです。</p>
     <p class="note">ライブのチケットは含まれません（別にお求めください）。当日来られない方の Crew のみのご購入も歓迎です（その場合はデジタルコンテンツのみのお届けになります）。リハーサル見学の時間は、決まり次第購入者の皆さんにお知らせします。</p>
     <p class="price">¥10,000</p>
-    <span class="btn pending" role="note">販売ページ 準備中</span>
+    <p class="pending-note">販売ページは準備中です。始まったら <a href="#log">Log</a> でお知らせします。</p>
   </div>
 </section>
 
@@ -188,8 +198,9 @@ footer a:hover{color:var(--accent)}
     <h2><span class="en" lang="en">Log</span> を受け取る</h2>
     <p class="kicker">まだ決めきれない方へ</p>
     <p>ツアー当日までの記録を、無料の便りでお届けします。当日へ向かう時間と空気感を共有します。</p>
+    <label class="field-label" for="log-email">メールアドレス</label>
     <form class="log-form" id="log-form" action="https://app.kit.com/forms/9606457/subscriptions" method="post" novalidate>
-      <input type="email" name="email_address" placeholder="メールアドレス" aria-label="メールアドレス" autocomplete="email" required>
+      <input type="email" id="log-email" name="email_address" placeholder="you@example.com" autocomplete="email" required>
       <input type="hidden" name="fields[language]" value="website JP">
       <input type="hidden" name="fields[source]" id="f-source" value="tour-2026-10">
       <input type="hidden" name="tags[]" value="20632889">
@@ -205,7 +216,7 @@ footer a:hover{color:var(--accent)}
     <a href="https://takahiroizumikawa.com/" lang="en">Takahiro Izumikawa</a>
     <a href="https://takahiroizumikawa.com/contact.html">お問い合わせ</a>
   </div>
-  <span lang="en">photo · Stephanie Han</span>
+  <span>写真: Stephanie Han（上・東京）</span>
 </footer>
 
 <script>
@@ -226,12 +237,20 @@ footer a:hover{color:var(--accent)}
       headers:{'Content-Type':'application/x-www-form-urlencoded','Accept':'application/json'},
       body:new URLSearchParams(new FormData(form)).toString()
     })
-    .then(function(r){ if(!r.ok) throw new Error('http '+r.status); })
-    .then(function(){
-      form.outerHTML = '<div class="log-done"><p class="t">ありがとうございます</p><p>確認のメールをお送りしました。受信箱をご確認ください。</p></div>';
+    .then(function(r){
+      if(!r.ok) throw new Error('http '+r.status);
+      return r.json().catch(function(){ return {}; });
+    })
+    .then(function(d){
+      if(d && d.status && d.status !== 'success') throw new Error('kit '+d.status);
+      form.hidden = true;
+      document.querySelector('.field-label').hidden = true;
+      msg.className = 'log-msg ok';
+      msg.textContent = 'ありがとうございます。確認のメールをお送りしました。受信箱をご確認ください。';
     })
     .catch(function(){
       btn.disabled = false;
+      msg.className = 'log-msg';
       msg.textContent = '送信できませんでした。少し時間をおいて再度お試しください。';
     });
   });
