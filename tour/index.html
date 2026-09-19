@@ -140,24 +140,31 @@ section {
   padding: 0;
   overflow: hidden;
 }
-.hero::before {
+.hero > img.hero-photo {   /* ライブ写真をヘッダーの背景に（2026-09-19）。`.hero > *` の position:relative に負けないよう子セレクタで指定 */
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; object-position: 62% 42%;
+  filter: brightness(.52) contrast(1.06) grayscale(.15);
+  z-index: 0; pointer-events: none;
+}
+.hero::before {          /* Alaya のブランドカードの模様（透過）を右に重ねる */
   content: '';
   position: absolute;
   inset: 0;
-  z-index: 0;
-  background-image: url("_assets/header-desktop.jpg");
-  background-size: cover;
-  background-position: center;
+  z-index: 1;
+  background-image: url("_assets/pattern.png");
+  background-size: auto 104%;
+  background-position: right -40px center;
   background-repeat: no-repeat;
-  opacity: 1;
+  opacity: .42;
   pointer-events: none;
 }
-.hero::after {
+.hero::after {           /* 文字の可読性のための暗幕 */
   content: '';
   position: absolute;
   inset: 0;
-  z-index: 0;
-  background: linear-gradient(180deg, rgba(22,22,22,0) 0%, rgba(22,22,22,0) 55%, rgba(22,22,22,0.85) 100%);
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(22,22,22,.30) 0%, rgba(22,22,22,.10) 34%, rgba(22,22,22,.72) 78%, var(--bg) 100%),
+              linear-gradient(90deg, rgba(22,22,22,.72) 0%, rgba(22,22,22,.12) 58%, rgba(22,22,22,0) 100%);
   pointer-events: none;
 }
 .hero > * { position: relative; z-index: 2; }
@@ -576,12 +583,14 @@ footer {
 @media (max-width: 768px) {
   body { font-size: 14px; }
 
+  /* スマホ: 模様は上の右だけに小さく出し、文字が始まる手前で消す（2026-09-19） */
   .hero::before {
-    background-image: url("_assets/header-mobile.jpg");
+    background-size: auto 62%;
+    background-position: right -24px top 6%;
+    opacity: .34;
   }
-  /* 模様が名前・日付の行にかからないよう、文字が始まる手前で消す（2026-09-19） */
   .hero::after {
-    background: linear-gradient(180deg, rgba(22,22,22,0) 0%, rgba(22,22,22,0) 30%, rgba(22,22,22,.86) 48%, rgba(22,22,22,.98) 60%, var(--bg) 100%);
+    background: linear-gradient(180deg, rgba(22,22,22,.34) 0%, rgba(22,22,22,.14) 26%, rgba(22,22,22,.86) 52%, rgba(22,22,22,.98) 64%, var(--bg) 100%);
   }
 
   .ticket-row {
@@ -646,6 +655,7 @@ footer {
 
 <!-- ===== HERO ===== -->
 <section class="hero">
+  <img class="hero-photo" src="_assets/live.webp" width="1600" height="1067" alt="ステージで演奏する Takahiro Izumikawa">
   <h1 class="hero-title hero-title-text reveal r-2"><img class="t-main" src="_assets/title-yatara-redbar.webp" width="1765" height="440" alt="YATARA"><img class="t-sub" src="_assets/title-yataraku-red.webp" width="1133" height="140" alt="夜打楽"></h1>
   <div class="hero-foot">
     <div class="hero-foot-left">
@@ -661,7 +671,6 @@ footer {
 <!-- ===== STATEMENT (HERO直後・タイトル画像と被らない単独セクション) ===== -->
 <section class="statement-block">
   <div class="container">
-    <figure class="live-photo reveal r-4"><img src="_assets/live.webp" width="1600" height="1067" alt="ステージで演奏する Takahiro Izumikawa"></figure>
     <p class="catch reveal r-4"><span class="nb">分からなくていい。</span><span class="nb">ただ心を揺さぶられること。</span></p>
     <p class="hero-statement reveal r-4">
       ニューヨークを拠点にするピアニスト、Takahiro Izumikawa の日本公演。<br>
