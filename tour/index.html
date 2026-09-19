@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Takahiro Izumikawa Japan Tour 2026 — 10.26 大阪 / 10.30 東京</title>
-<meta name="description" content="分からなくていい。心を揺さぶられに来て。2026年10月、大阪（ピアノソロ）・東京（バンド）の2公演。">
+<meta name="description" content="分からなくていい。ただ心を揺さぶられること。2026年10月、大阪（ピアノソロ）・東京（YATARA フルバンド）の2公演。">
 
 <!-- 検索エンジンに出さない（プレースホルダ段階・URL知ってる人だけアクセス可） -->
 <meta name="robots" content="noindex, nofollow">
 
 <!-- OGP -->
 <meta property="og:title" content="Takahiro Izumikawa Japan Tour 2026 — 10.26 大阪 / 10.30 東京">
-<meta property="og:description" content="分からなくていい。心を揺さぶられに来て。大阪はピアノソロ、東京はバンドで。">
+<meta property="og:description" content="分からなくていい。ただ心を揺さぶられること。大阪はピアノソロ、東京は YATARA のフルバンドで。">
 <meta property="og:type" content="website">
 <!-- TODO[v2]: og:image にフライヤー画像（Alaya Phase 3完成後）を差し込む -->
 <!-- <meta property="og:image" content="_assets/og.jpg"> -->
@@ -23,6 +23,8 @@
 
 <!-- Kit form handler: フォーム送信を AJAX で処理（LP内で完結） -->
 <script src="https://f.convertkit.com/ckjs/ck.5.js" defer></script>
+<!-- hitori-goto（みんなの独り言）: Supabase client -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <!-- TODO[v1]: GA4 トラッキングID差し込み（G-XXXXXXXXXX を実IDに置換してアンコメント） -->
 <!--
@@ -142,7 +144,7 @@ section {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background-image: url("_assets/hero-bg-desktop.jpg");
+  background-image: url("_assets/header-desktop.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -154,7 +156,7 @@ section {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: linear-gradient(180deg, rgba(22,22,22,0.05) 0%, rgba(22,22,22,0.40) 60%, rgba(22,22,22,0.90) 100%);
+  background: linear-gradient(180deg, rgba(22,22,22,0) 0%, rgba(22,22,22,0) 55%, rgba(22,22,22,0.85) 100%);
   pointer-events: none;
 }
 .hero > * { position: relative; z-index: 2; }
@@ -574,7 +576,7 @@ footer {
   body { font-size: 14px; }
 
   .hero::before {
-    background-image: url("_assets/hero-bg-mobile.jpg");
+    background-image: url("_assets/header-mobile.jpg");
   }
 
   .ticket-row {
@@ -631,7 +633,7 @@ footer {
       <p class="hero-meta reveal r-1">Takahiro Izumikawa &#9642; Japan Tour 2026</p>
       <div class="hero-subtitle reveal r-3" aria-label="Tour dates">
         <span class="m">Oct</span><span class="d">26</span><span class="c">&middot; Osaka &middot; Piano Solo</span>
-        <span class="m">Oct</span><span class="d">30</span><span class="c">&middot; Tokyo &middot; Band</span>
+        <span class="m">Oct</span><span class="d">30</span><span class="c">&middot; Tokyo &middot; YATARA Full Band</span>
       </div>
     </div>
   </div>
@@ -641,10 +643,10 @@ footer {
 <section class="statement-block">
   <div class="container">
     <figure class="live-photo reveal r-4"><img src="_assets/live.webp" width="1600" height="1067" alt="ステージで演奏する Takahiro Izumikawa"></figure>
-    <p class="catch reveal r-4"><span class="nb">分からなくていい。</span><span class="nb">心を揺さぶられに来て。</span></p>
+    <p class="catch reveal r-4"><span class="nb">分からなくていい。</span><span class="nb">ただ心を揺さぶられること。</span></p>
     <p class="hero-statement reveal r-4">
       ニューヨークを拠点にするピアニスト、Takahiro Izumikawa の日本公演。<br>
-      大阪はピアノ一台で。東京はバンドで、新しいジャンル <a href="https://takahiroizumikawa.com/yatara/?lang=ja" target="_blank" rel="noopener">YATARA</a> のお披露目です。
+      大阪はピアノ一台で。東京はフルバンドで、新しいジャンル <a href="https://takahiroizumikawa.com/yatara/?lang=ja" target="_blank" rel="noopener">YATARA</a> のお披露目です。
     </p>
   </div>
 </section>
@@ -701,11 +703,10 @@ footer {
           <div class="ticket-info">
             <div class="ticket-meta">
               <span class="city">東京</span>
-              <span class="date">10月30日（金）　バンド</span>
+              <span class="date">10月30日（金）　YATARA フルバンド</span>
             </div>
             <div class="venue-name">晴れたら空に豆まいて</div>
-            <div class="ease">新しいジャンル YATARA のお披露目。バンドで鳴らす夜。</div>
-            <div class="detail"><span class="nb">OPEN 19:00 ／ ¥6,500</span><span class="nb">（More Than Music メンバー ¥4,500）</span></div>
+            <div class="ease">新しいジャンル YATARA のお披露目。フルバンドで鳴らす夜。</div>
           </div>
           <a href="https://morethanmusicjapan.com/ja/collections/frontpage/products/261030sk" target="_blank" rel="noopener" class="ticket-link">Tickets</a>
         </div>
@@ -717,16 +718,274 @@ footer {
       <h2 class="entry-title reveal r-2"><span class="en accent">Crew</span>に加わる</h2>
       <p class="entry-jp reveal r-3">クルーとして、制作の内側から目撃する。</p>
       <p class="entry-body reveal r-3">
-        10月30日 晴れたら空に豆まいて公演のリハーサル見学と、<br>
+        10月30日 晴れたら空に豆まいて公演当日のサウンドチェックと、<br>
         舞台裏・リハ動画・当日の演奏動画 — クルーにだけ届くデジタルコンテンツ。
       </p>
-      <p class="crew-note reveal r-3">¥10,000 ／ ライブのチケットは含まれません（別にお求めください）。当日来られない方の Crew のみのご購入も歓迎です（その場合はデジタルコンテンツのみ）。</p>
       <span class="crew-cta is-pending reveal r-4">Join the Crew — 近日販売</span>
     </article>
 
   </div>
 </section>
 
+<!-- ===== 桟橋（みんなの独り言）統合 2026-06-06 / 正本: 桟橋_section.html ===== -->
+<style>
+/* フッター被り回避: ページ最下部に compose 高さ分を「静的に」確保（Crew index.html L75 と同じ静的CSS方式）。
+   ※JSで動的に body padding を変えるとスマホのアドレスバー開閉で resize 連発→フッターが動く・スクロールがガクつくため、必ず静的にする（2026-06-07）。 */
+body { padding-bottom: calc(180px + env(safe-area-inset-bottom, 0px)); }
+.pier {
+  --pier-bg:        #161616;
+  --pier-deeper:    #0e0e0e;
+  --pier-lifted:    #1c1c1c;
+  --pier-text:      #f5f0e8;
+  --pier-dim:       rgba(245,240,232,0.55);
+  --pier-faint:     rgba(245,240,232,0.32);
+  --pier-accent:    #f5f0e8;   /* 赤(#e22229)はCrewと被るため白(cream)に変更（2026-06-06 HASHIRA）＝近接層の色差別化 */
+  --pier-rule:      rgba(245,240,232,0.14);
+  --pier-rule-faint:rgba(245,240,232,0.07);
+  --pier-font-en:   'Poppins','Shippori Mincho',sans-serif;
+  --pier-font-jp:   'Shippori Mincho','Yu Mincho',YuMincho,'游明朝',serif;
+  --pier-gutter:    clamp(24px,5vw,64px);
+  --pier-max:       1080px;
+}
+.pier section { position:relative; z-index:2; padding-left:var(--pier-gutter); padding-right:var(--pier-gutter); }
+.pier .pier-container { max-width:var(--pier-max); margin:0 auto; width:100%; }
+
+/* 敷居（threshold）: 明→暗グラデ + 赤 wordmark（Crew D4 型スライド） */
+.pier-threshold { min-height:50vh; display:flex; flex-direction:column; align-items:center; justify-content:center; background:linear-gradient(180deg, var(--pier-bg) 0%, var(--pier-bg) 18%, var(--pier-lifted) 100%); text-align:center; }
+.pier-threshold-mark { font-family:var(--pier-font-en); font-weight:500; font-style:normal; font-size:clamp(22px,3vw,32px); letter-spacing:0.05em; color:var(--pier-accent); }
+.pier-threshold-sub { margin-top:12px; font-family:var(--pier-font-jp); font-size:13px; letter-spacing:0.10em; color:var(--pier-faint); }
+.pier-threshold-rule { width:36px; height:1px; background:var(--pier-rule); margin:20px auto 0; }
+.pier-threshold-hint { margin-top:26px; font-family:var(--pier-font-en); font-size:10px; letter-spacing:0.30em; text-transform:uppercase; color:var(--pier-faint); }
+
+/* 部屋（room） */
+.pier-room { background:var(--pier-lifted); padding-top:clamp(20px,3vh,36px); padding-bottom:24px; }
+.hg-feed { max-height:65vh; min-height:320px; overflow-y:auto; -webkit-overflow-scrolling:touch; padding-right:4px; }   /* Crew方式: 一定サイズで内部スクロール（投稿が増えてもページは膨張しない・新着は自動下スクロール / 進行ログ2026-05-?? L3873） */
+.hg-murmur { margin-bottom:34px; max-width:600px; }
+.hg-text { font-family:var(--pier-font-jp); font-size:15px; line-height:1.95; letter-spacing:0.04em; color:rgba(245,240,232,0.85); white-space:pre-wrap; word-break:break-word; }
+.hg-by { font-family:var(--pier-font-en); font-size:11px; letter-spacing:0.16em; color:var(--pier-faint); margin-top:8px; }
+
+/* 下固定 compose（Crew D5 型スライド）+ soft-gate */
+/* compose = Crew方式の下からせり上がる固定ポップアップ。room表示中のみ出し、footerが視界に入ったら隠す＝フッター被り解消 */
+.hg-compose { position:fixed; left:0; right:0; bottom:0; z-index:50; background:var(--pier-deeper); border-top:1px solid var(--pier-rule); padding:14px var(--pier-gutter) max(14px, env(safe-area-inset-bottom)); transform:translateY(120%); transition:transform .55s cubic-bezier(.16,1,.3,1); }
+.hg-compose.show { transform:translateY(0); }
+@media (prefers-reduced-motion: reduce){ .hg-compose{ transition:none; } }
+.hg-compose-inner { max-width:var(--pier-max); margin:0 auto; position:relative; }
+.hg-affirm { position:absolute; bottom:100%; left:0; right:0; padding:10px 0 14px; font-family:var(--pier-font-jp); font-size:13px; color:var(--pier-dim); background:linear-gradient(transparent, var(--pier-deeper) 60%); opacity:0; transition:opacity .8s ease; pointer-events:none; }
+.hg-affirm.show { opacity:1; }
+.hg-affirm.err { color:var(--pier-accent); }
+/* compose: 「Logを受け取る」フォームと同じ作り（上下の罫線で囲む横帯・入力左フレックス＋ボタン右） */
+.hg-compose-row { display:flex; align-items:flex-end; gap:0; border-top:1px solid var(--pier-rule); border-bottom:1px solid var(--pier-rule); padding:0; }
+.hg-input { flex:1; min-width:0; background:transparent; border:0; color:var(--pier-text); font-family:var(--pier-font-jp); font-size:15px; line-height:1.9; letter-spacing:0.04em; padding:16px 0; resize:none; outline:none; max-height:120px; }
+.hg-input::placeholder { color:var(--pier-faint); font-family:var(--pier-font-jp); letter-spacing:0.08em; }
+.hg-input:focus { color:var(--pier-text); }
+.hg-input:disabled { color:var(--pier-faint); cursor:not-allowed; }
+.hg-submit { background:transparent; border:0; color:var(--pier-text); font-family:var(--pier-font-jp); font-weight:500; font-size:14px; letter-spacing:0.15em; padding:16px 0 16px 28px; cursor:pointer; white-space:nowrap; transition:color .4s ease; }
+.hg-submit:hover, .hg-submit:focus-visible { color:#ffffff; outline:none; }
+.hg-submit:disabled { color:var(--pier-faint); cursor:not-allowed; }
+.hg-name { display:block; background:transparent; border:0; border-bottom:1px solid var(--pier-rule-faint); color:var(--pier-text); font-family:var(--pier-font-jp); font-size:12px; letter-spacing:0.04em; padding:6px 0; margin-top:14px; outline:none; width:160px; }
+.hg-name::placeholder { color:var(--pier-faint); }
+.hg-name:disabled { cursor:not-allowed; }
+.hg-gate { font-family:var(--pier-font-jp); font-size:13px; letter-spacing:0.04em; color:var(--pier-dim); margin-bottom:14px; }
+.hg-gate a { color:var(--pier-text); text-decoration:underline; text-decoration-color:rgba(245,240,232,0.30); text-underline-offset:3px; cursor:pointer; transition:color .4s ease; }
+.hg-gate a:hover { color:var(--pier-accent); }
+.hg-gate.hide { display:none; }
+</style>
+
+<!-- ===== 桟橋（みんなの独り言）===== -->
+<div class="pier">
+  <section class="pier-threshold">
+    <div class="pier-threshold-mark">hitori-goto</div>
+    <div class="pier-threshold-sub">みんなの独り言</div>
+    <div class="pier-threshold-rule"></div>
+    <div class="pier-threshold-hint">&darr;</div>
+  </section>
+
+  <section class="pier-room">
+    <div class="pier-container">
+      <div class="hg-feed" id="hg-feed"></div>
+    </div>
+  </section>
+
+  <div class="hg-compose" id="hg-compose">
+    <div class="hg-compose-inner">
+      <div class="hg-affirm" id="hg-affirm"></div>
+      <div class="hg-gate" id="hg-gate">
+        <a id="hg-unlock">Logを受け取って</a>ここに一言残す。<br>
+        登録済の方ももう一度入力で書き込めます。
+      </div>
+      <div class="hg-compose-row">
+        <textarea class="hg-input" id="hg-text" rows="1" maxlength="500" placeholder="独り言を書く" disabled></textarea>
+        <button class="hg-submit" id="hg-submit" type="button" disabled>書く</button>
+      </div>
+      <input class="hg-name" id="hg-name" type="text" maxlength="20" placeholder="名前（任意）" disabled>
+    </div>
+  </div>
+</div>
+
+<script>
+/* =====================================================================
+   桟橋（みんなの独り言）— 本番ロジック（Supabase版）
+   読む=全員 / 書く=The Log登録者のみ(soft-gate)。返信/いいね/数字/通知なし(傷つかない設計)。
+   ===================================================================== */
+(function () {
+  var SUPABASE_URL      = 'https://ndzwxzcebjtbljqnrndf.supabase.co';
+  var SUPABASE_ANON_KEY = 'sb_publishable_GNC10LLRYdjWLSuMwtHUlA_Nlw94rJH';
+  // Crew越境防止（blocker）: 桟橋はCrewと別Supabaseプロジェクト必須。
+  //   同居すると公開anon keyで Crew の hitorigoto(RLS=anon全件可) を越境読み取りできる＝Crew独り言が流出する。
+  if (SUPABASE_URL.indexOf('abivdafsebrjsuduhdto') !== -1) {
+    throw new Error('桟橋はCrewと別Supabaseプロジェクト必須（同居するとanon keyでCrewの独り言を越境読み取り可能）');
+  }
+  var sb = (window.supabase
+            && SUPABASE_URL.indexOf('__') === -1
+            && SUPABASE_ANON_KEY.indexOf('__') === -1)
+             ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY) : null;
+
+  /* seed（先客の独り言）= HASHIRA確定13本（Taka 8 + 17LIVE実5・匿名）。
+     HTMLハードコードで常時先頭表示＝過疎防止（DBは訪問者の書き込みのみ保持）。
+     新着が下＝上から下へ読むと航海の弧。出典: 桟橋_SPEC §5。 */
+  var SEEDS = [];   /* 2026-10: 6月の先客13本は6月ツアー固有のため外した（10月の最初の一言で空でなくなる） */
+
+  var GATE_KEY = 'tour202610_pier_unlocked';
+  var LAST_KEY = 'tour202610_pier_last';
+  var COOLDOWN_MS = 60 * 1000;
+  /* 簡易NGワード（クライアント即時非表示。サーバ側 is_hidden モデレーションと二重）。本番の実NGリストは別管理。 */
+  var NG = ['http://', 'https://', 'www.', '稼げる', '副業', 'ビットコイン', 'アダルト'];
+
+  var feedEl   = document.getElementById('hg-feed');
+  var textEl   = document.getElementById('hg-text');
+  var nameEl   = document.getElementById('hg-name');
+  var submitEl = document.getElementById('hg-submit');
+  var affirmEl = document.getElementById('hg-affirm');
+  var composeEl= document.getElementById('hg-compose');
+  var gateEl   = document.getElementById('hg-gate');
+  var unlockEl = document.getElementById('hg-unlock');
+  var roomEl   = document.querySelector('.pier-room');
+  var affirmTimer = null;
+  var dbRows = [];
+
+  function isUnlocked(){
+    try {
+      if (localStorage.getItem(GATE_KEY) === '1') return true;
+      var p = new URLSearchParams(window.location.search);
+      if (p.get('subscribed') === 'true') { localStorage.setItem(GATE_KEY, '1'); return true; }
+    } catch(e){}
+    return false;
+  }
+  function looksLikeNG(s){ var low = s.toLowerCase(); return NG.some(function(w){ return low.indexOf(w.toLowerCase()) !== -1; }); }
+  function allRows(){ return SEEDS.concat(dbRows); }   // seedが構造的に常に先頭＝空状態を出さない
+
+  function render(){
+    feedEl.innerHTML = '';
+    allRows().forEach(function(m){
+      if (m.is_hidden) return;               // 実防御はRLS(SELECT is_hidden=false)が唯一。これは保険（DBrowはis_hidden列未取得で通常undefined）
+      if (m.body && looksLikeNG(m.body)) return; // クライアント側NG即時非表示
+      var wrap = document.createElement('div'); wrap.className = 'hg-murmur';
+      var p = document.createElement('p'); p.className = 'hg-text'; p.textContent = m.body; wrap.appendChild(p); // textContent=XSS安全
+      if (m.name) { var by = document.createElement('div'); by.className = 'hg-by'; by.textContent = '— ' + m.name; wrap.appendChild(by); }
+      feedEl.appendChild(wrap);
+    });
+    feedEl.scrollTop = feedEl.scrollHeight;
+  }
+  function notice(msg, isErr){
+    affirmEl.textContent = msg;
+    affirmEl.className = 'hg-affirm show' + (isErr ? ' err' : '');
+    if (affirmTimer) clearTimeout(affirmTimer);
+    if (!isErr) affirmTimer = setTimeout(function(){ affirmEl.classList.remove('show'); }, 4200);
+  }
+  function affirm(){ notice('独り言が記録されました。', false); }
+  function autosize(){ textEl.style.height = 'auto'; textEl.style.height = Math.min(textEl.scrollHeight, 120) + 'px'; }
+
+  function applyGate(){
+    var u = isUnlocked();
+    textEl.disabled = !u; nameEl.disabled = !u; submitEl.disabled = !u;
+    gateEl.classList.toggle('hide', u);
+    textEl.placeholder = u ? '独り言を書く' : 'Logを受け取ると、ここに書けます。';
+  }
+
+  /* soft-gate解放（blocker対策）: Kitフォームは現在 action:message（遷移なし）のため
+     ?subscribed=true が発火しない＝正規登録者が永久に書けない。Kitの成功DOM出現を
+     MutationObserverで掴んで解放する（Kit設定変更不要）。?subscribed=true 経路
+     （リダイレクト運用に切替えた場合）は isUnlocked() が拾う。
+     ⚠️ 本番ローンチ前に必ず実機スモーク（テストemail登録→composeが解放されるか）。
+        不発なら Kitフォームを redirect_url=本番URL+?subscribed=true に切替（桟橋_SPEC §4-3）。 */
+  function unlock(){ try { localStorage.setItem(GATE_KEY, '1'); } catch(e){} applyGate(); notice('Log を受け取りました。独り言を残せます。', false); }
+  function logSuccessSeen(){
+    if (document.querySelector('.log-success')) return true;                     // ?subscribed=true 経路（index.html L747-750が生成）
+    var fs = document.querySelector('.formkit-alert-success');
+    if (fs && (fs.textContent || '').trim().length > 0) return true;             // Kit in-place 成功メッセージ
+    var de = document.querySelector('[data-element="success"]');
+    if (de && de.offsetParent !== null && (de.textContent || '').trim().length > 0) return true;
+    return false;
+  }
+  function watchLogSuccess(){
+    if (isUnlocked()) return;
+    if (logSuccessSeen()) { unlock(); return; }
+    if (!('MutationObserver' in window)) return;
+    var mo = new MutationObserver(function(){ if (logSuccessSeen()) { unlock(); mo.disconnect(); } });
+    mo.observe(document.body, { childList: true, subtree: true, characterData: true });
+  }
+
+  function load(){
+    if (!sb) return;   // 未接続（プレースホルダのまま）＝seedのみ表示
+    sb.from('hitorigoto_pier').select('name,body,created_at').gte('created_at', '2026-09-19T00:00:00Z').order('created_at', { ascending: true }).then(function(res){
+      if (res.error) { /* 読み込み失敗時はseedのみ＝空にしない */ return; }
+      dbRows = res.data || [];
+      render();
+    });
+  }
+  function submit(){
+    if (!isUnlocked()) { notice('読むのは自由です。書くには、まず Log を受け取ってから。', true); return; }
+    var body = (textEl.value || '').trim();
+    if (!body) { textEl.focus(); return; }
+    if (body.length > 500) { notice('長すぎます（500字まで）。', true); return; }
+    var last = 0; try { last = parseInt(localStorage.getItem(LAST_KEY) || '0', 10); } catch(e){}
+    if (Date.now() - last < COOLDOWN_MS) { notice('少し、間をおいて。', true); return; }
+    if (looksLikeNG(body)) { notice('ここには、宣伝やリンクは置けません。', true); return; }
+    if (!sb) { notice('いま接続できませんでした。少し時間をおいて。', true); return; }
+    var name = (nameEl.value || '').trim().slice(0, 20);
+    submitEl.disabled = true;
+    sb.from('hitorigoto_pier').insert({ body: body, name: name || null }).then(function(res){
+      submitEl.disabled = false;
+      if (res.error) { notice('うまく届きませんでした。もう一度。', true); return; }
+      try { localStorage.setItem(LAST_KEY, String(Date.now())); } catch(e){}
+      textEl.value = ''; autosize(); affirm();
+      load();   // realtimeが無い環境でも自分の投稿を反映
+    });
+  }
+
+  // soft-gate解放リンク → The Logフォームへ誘導（登録成功で ?subscribed=true → 次回isUnlocked）
+  unlockEl.addEventListener('click', function(e){
+    e.preventDefault();
+    var logInput = document.querySelector('.log-form input[type=email]');
+    var logEntry = document.querySelector('.entry.log') || document.querySelector('.log-form');
+    if (logEntry && logEntry.scrollIntoView) logEntry.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    if (logInput) setTimeout(function(){ try { logInput.focus(); } catch(e){} }, 400);
+  });
+
+  submitEl.addEventListener('click', submit);
+  textEl.addEventListener('input', autosize);
+  textEl.addEventListener('keydown', function(e){ if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') { e.preventDefault(); submit(); } });
+
+  // ===== Crew方式（hitori-goto と全く同じ）=====
+  // room（部屋）が見えている間だけ compose をせり上げる。footer検出もJSによるpadding操作もしない。
+  // フッター被りは CSS の静的 body padding-bottom（下記 <style>）で compose 高さ分を確保（Crew index.html L75 と同じ静的方式）。
+  // ※JSで body padding を動的変更すると、スマホのアドレスバー開閉で resize が連発→再計算→layout変化で
+  //   フッターが動く・スクロールがガクつく（2026-06-07 ユーザー報告で修正）。だからJSでは一切paddingを触らない。
+  if ('IntersectionObserver' in window && roomEl) {
+    new IntersectionObserver(function(es){ es.forEach(function(e){ composeEl.classList.toggle('show', e.isIntersecting); }); }, { threshold: 0.01 }).observe(roomEl);
+  } else { composeEl.classList.add('show'); }
+
+  applyGate();
+  watchLogSuccess();   // The Log登録成功を監視して soft-gate を解放（blocker対策）
+  render();   // seedを即描画（空にしない）
+  load();     // DBの訪問者投稿を追って反映
+  if (sb) {
+    try { sb.channel('pier-rt').on('postgres_changes', { event: 'INSERT', schema: 'public', table: 'hitorigoto_pier' }, function(){ load(); }).subscribe(); } catch(e){}
+  }
+})();
+</script>
+
+<!-- ===== FOOTER ===== -->
 <footer>
   <div class="footer-inner">
     <div>
