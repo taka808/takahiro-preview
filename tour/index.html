@@ -636,6 +636,8 @@ footer {
 /* hitori-goto: 10月は先客の独り言が無いので、投稿0件のときは欄の高さを0にして空白を出さない */
 .hg-feed:empty{min-height:0}
 /* 320px などの狭い画面で公演日の3列目（Tokyo · YATARA Full Band）が画面外に出ないよう折り返す */
+/* 320px では題字の最後の A が背景の模様に重なるので、狭い画面だけ少し小さくする（2026-09-19） */
+@media (max-width:360px){.hero-title-text .t-main{font-size:56px}}
 @media (max-width:400px){.hero-subtitle{display:block}.hero-subtitle .m{margin-right:.45em}.hero-subtitle .d{margin-right:.55em}.hero-subtitle .c{display:inline;white-space:normal}.hero-subtitle .c::after{content:"\A";white-space:pre}}
 </style>
 </head>
