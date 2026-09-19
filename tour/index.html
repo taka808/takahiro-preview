@@ -96,7 +96,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:1px solid var(-
 .log-form{display:flex;gap:10px;max-width:460px}
 .log-form input[type="email"]{flex:1;min-width:0;min-height:48px;background:none;border:0;border-bottom:1px solid rgba(245,240,232,.45);color:var(--text);font-family:inherit;font-size:16px;letter-spacing:.04em;padding:0 2px;transition:border-color .4s}
 .log-form input[type="email"]:focus{border-color:rgba(245,240,232,.6)}
-.log-form input[type="email"]::placeholder{color:rgba(245,240,232,.38)}
+.log-form input[type="email"]::placeholder{color:rgba(245,240,232,.5)}
 .log-form .btn:disabled{opacity:.45;cursor:default}
 .pending-note{font-family:'Noto Sans JP',sans-serif;font-size:14px;line-height:1.9;letter-spacing:.04em;color:rgba(245,240,232,.86)}
 .pending-note a,.show .detail a{color:inherit;display:inline-block;padding:10px 4px;margin:-10px -4px}
@@ -107,7 +107,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:1px solid var(-
 .log p.log-msg:empty{margin:0}
 
 footer{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-top:clamp(72px,12vh,120px);padding:22px var(--gutter) 28px;border-top:1px solid var(--rule);font-size:12px;letter-spacing:.1em;color:var(--dim)}
-footer a{text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--rule);color:rgba(245,240,232,.8);transition:color .4s}
+footer a{text-decoration:underline;text-underline-offset:4px;text-decoration-color:rgba(245,240,232,.4);color:rgba(245,240,232,.8);transition:color .4s}
 footer .links{display:flex;gap:18px;flex-wrap:wrap}
 footer a:hover{color:var(--accent)}
 
@@ -117,12 +117,14 @@ footer a:hover{color:var(--accent)}
 @keyframes up{to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){.reveal{animation:none;opacity:1;transform:none}html{scroll-behavior:auto}}
 
-@media (max-width:640px){
+@media (max-width:1100px){
   .hero{min-height:auto;justify-content:flex-start;padding-top:0}
   .hero-photo{position:relative;height:58svh;margin:0 calc(-1 * var(--gutter))}
   .hero-photo::after{background:linear-gradient(to top,rgba(22,22,22,1) 0%,rgba(22,22,22,0) 42%)}
   .hero-bg{object-position:68% 28%}
   .hero-inner{margin-top:-5svh}
+}
+@media (max-width:640px){
   .dates li{gap:12px}
   .show{grid-template-columns:minmax(0,1fr);gap:18px}
   .show figure{aspect-ratio:1/1}
@@ -159,7 +161,7 @@ footer a:hover{color:var(--accent)}
       <figure><img class="osaka" src="osaka.webp" width="862" height="1150" alt="ピアノを弾く Takahiro Izumikawa" loading="lazy"></figure>
       <div>
         <p class="city" lang="en">OSAKA</p>
-        <h3>2026年10月26日（月）</h3>
+        <h3>大阪　2026年10月26日（月）</h3>
         <p class="format">ピアノソロ</p>
         <p class="venue" lang="en">BLUE YARD</p>
         <p class="addr">大阪市北区梅田3-2-123 イノゲート大阪内 バルチカ03（JR大阪駅直結）</p>
@@ -173,7 +175,7 @@ footer a:hover{color:var(--accent)}
       <figure><img src="tokyo.webp" width="862" height="1150" alt="バンドで演奏する Takahiro Izumikawa と客席" loading="lazy"></figure>
       <div>
         <p class="city" lang="en">TOKYO</p>
-        <h3>2026年10月30日（金）</h3>
+        <h3>東京　2026年10月30日（金）</h3>
         <p class="format">バンド</p>
         <p class="venue">晴れたら空に豆まいて</p>
         <p class="addr">東京都渋谷区代官山町20-20 モンシェリー代官山B2</p>
@@ -233,7 +235,7 @@ footer a:hover{color:var(--accent)}
   form.addEventListener('submit', function(e){
     e.preventDefault();
     var email = form.querySelector('input[type="email"]');
-    if(!email.checkValidity()){ email.reportValidity(); return; }
+    if(!email.checkValidity()){ msg.className = 'log-msg'; msg.textContent = 'メールアドレスの形で入力してください。'; email.focus(); return; }
     var btn = form.querySelector('button');
     btn.disabled = true; msg.textContent = '';
     fetch(form.action, {
