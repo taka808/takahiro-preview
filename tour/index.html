@@ -20,6 +20,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- 題字の下の 夜打楽 だけに使う（本拠地 yatara/index.html の .jp-sub と同じ書体）。3文字だけ読み込む -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&text=%E5%A4%9C%E6%89%93%E6%A5%BD&display=swap" rel="stylesheet">
 
 <!-- Kit form handler: フォーム送信を AJAX で処理（LP内で完結） -->
 <script src="https://f.convertkit.com/ckjs/ck.5.js" defer></script>
@@ -608,10 +610,14 @@ footer {
 
 /* ===== 2026-10 追加（6月の型に足したもの） ===== */
 .hero-title-text{aspect-ratio:16/9;line-height:1;display:flex;flex-direction:column;align-items:flex-start;padding:clamp(28px,6vw,96px) var(--gutter) 0}
-/* 題字: 夜打楽 = Alaya のブランドカードの模様と同じ、端の粗い紙の質感に加工した画像（Noto Sans JP 500 を描画→端を加工）。YATARA は普通の文字で小さく */
+/* 題字: YATARA = Alaya のブランドカードの模様と同じ、端の粗い紙の質感に加工した画像（Poppins 500 を描画→端を加工）。
+   下に行くほど薄く消える＝ヘッダーの模様（.hero::after：上はそのまま、下へ行くほど暗くなる）と同じ見え方。
+   模様と同じ数値（55%まで不透明→下端15%）を当てると、文字は高さが220pxしかないので中ほどに上下2色の境目が出た（2026-09-19 4案比較 A）。
+   上の2割は不透明、そこから下端で10%まで＝案 C を採用（画像の上下に余白があるので文字の下端は約25%）。
+   夜打楽 は普通の文字で小さく（本拠地 yatara/index.html の .jp-sub と同じ組み方） */
 .hero-title-text img{max-width:none}
-.hero-title-text .t-main{display:block;height:clamp(64px,15vw,220px);width:auto}
-.hero-title-text .t-sub{display:block;font-family:'Poppins',sans-serif;font-weight:500;font-size:clamp(15px,2vw,28px);letter-spacing:.5em;color:rgba(245,240,232,.8);margin-top:clamp(12px,1.6vw,24px)}
+.hero-title-text .t-main{display:block;height:clamp(64px,15vw,220px);width:auto;-webkit-mask-image:linear-gradient(180deg,#000 0%,#000 20%,rgba(0,0,0,.10) 100%);mask-image:linear-gradient(180deg,#000 0%,#000 20%,rgba(0,0,0,.10) 100%)}
+.hero-title-text .t-sub{display:block;font-family:'Noto Sans JP',sans-serif;font-weight:300;font-size:clamp(15px,2vw,28px);letter-spacing:.62em;color:rgba(245,240,232,.8);margin-top:clamp(12px,1.6vw,24px)}
 .nb{display:inline-block}
 .live-photo{margin:0 0 clamp(28px,5vh,48px)}
 .live-photo img{display:block;width:100%;height:auto;filter:brightness(.9) contrast(1.05)}
@@ -634,7 +640,7 @@ footer {
 
 <!-- ===== HERO ===== -->
 <section class="hero">
-  <h1 class="hero-title hero-title-text reveal r-2"><img class="t-main" src="_assets/title-yataraku-main.webp" width="1399" height="440" alt="夜打楽"><span class="t-sub" lang="en">YATARA</span></h1>
+  <h1 class="hero-title hero-title-text reveal r-2"><img class="t-main" src="_assets/title-yatara.webp" width="1765" height="440" alt="YATARA"><span class="t-sub" lang="ja">夜　打　楽</span></h1>
   <div class="hero-foot">
     <div class="hero-foot-left">
       <p class="hero-meta reveal r-1">Takahiro Izumikawa &#9642; Japan Tour 2026</p>
