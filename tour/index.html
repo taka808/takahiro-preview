@@ -608,10 +608,10 @@ footer {
 
 /* ===== 2026-10 追加（6月の型に足したもの） ===== */
 .hero-title-text{aspect-ratio:16/9;line-height:1;display:flex;flex-direction:column;align-items:flex-start;padding:clamp(28px,6vw,96px) var(--gutter) 0}
-/* 題字は Alaya のブランドカードの模様と同じ、端の粗い紙の質感に加工した画像（Poppins 500 / Noto Sans JP 300 を描画→端を加工・大きさは元の文字の箱と同じ比率） */
+/* 題字: 夜打楽 = Alaya のブランドカードの模様と同じ、端の粗い紙の質感に加工した画像（Noto Sans JP 500 を描画→端を加工）。YATARA は普通の文字で小さく */
 .hero-title-text img{max-width:none}
-.hero-title-text .t-en{display:block;height:clamp(64px,15vw,220px);width:auto}
-.hero-title-text .t-jp{display:block;height:clamp(16px,2.4vw,34px);width:auto;margin-top:clamp(10px,1.4vw,22px);opacity:.8}
+.hero-title-text .t-main{display:block;height:clamp(64px,15vw,220px);width:auto}
+.hero-title-text .t-sub{display:block;font-family:'Poppins',sans-serif;font-weight:500;font-size:clamp(15px,2vw,28px);letter-spacing:.5em;color:rgba(245,240,232,.8);margin-top:clamp(12px,1.6vw,24px)}
 .nb{display:inline-block}
 .live-photo{margin:0 0 clamp(28px,5vh,48px)}
 .live-photo img{display:block;width:100%;height:auto;filter:brightness(.9) contrast(1.05)}
@@ -634,7 +634,7 @@ footer {
 
 <!-- ===== HERO ===== -->
 <section class="hero">
-  <h1 class="hero-title hero-title-text reveal r-2"><img class="t-en" src="_assets/title-yatara.webp" width="1765" height="440" alt="YATARA"><img class="t-jp" src="_assets/title-yataraku.webp" width="1101" height="136" alt="夜打楽"></h1>
+  <h1 class="hero-title hero-title-text reveal r-2"><img class="t-main" src="_assets/title-yataraku-main.webp" width="1399" height="440" alt="夜打楽"><span class="t-sub" lang="en">YATARA</span></h1>
   <div class="hero-foot">
     <div class="hero-foot-left">
       <p class="hero-meta reveal r-1">Takahiro Izumikawa &#9642; Japan Tour 2026</p>
