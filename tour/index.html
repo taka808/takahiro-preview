@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Takahiro Izumikawa Japan Tour 2026 — 10.26 大阪 / 10.30 東京</title>
+<meta name="description" content="分からなくていい。心を揺さぶられに来て。10月26日 大阪 BLUE YARD（ピアノソロ）／10月30日 東京 晴れたら空に豆まいて（バンド・YATARA のお披露目）。">
+<meta property="og:title" content="Takahiro Izumikawa Japan Tour 2026 — 10.26 大阪 / 10.30 東京">
+<meta property="og:description" content="分からなくていい。心を揺さぶられに来て。大阪はピアノソロ、東京はバンドで。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://takahiroizumikawa.com/tour/">
+<meta property="og:image" content="https://takahiroizumikawa.com/tour/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#161616; --text:#f5f0e8;
+  --dim:rgba(245,240,232,.55); --faint:rgba(245,240,232,.32);
+  --accent:#db2626; --rule:rgba(245,240,232,.14);
+  --font:'Poppins','Noto Sans JP',sans-serif;
+  --gutter:clamp(20px,5vw,64px);
+  --max:680px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+html,body{background:var(--bg);color:var(--text);font-family:var(--font);font-weight:300;-webkit-font-smoothing:antialiased}
+body{overflow-x:hidden;letter-spacing:.02em}
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:5;opacity:.08;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.96 0 0 0 0 0.94 0 0 0 0 0.91 0 0 0 0.5 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")
+}
+a{color:inherit}
+.nb{display:inline-block}
+
+/* ── hero ── */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(24px,4vh,40px) var(--gutter) clamp(36px,7vh,72px);overflow:hidden}
+.hero-photo{position:absolute;inset:0;z-index:0}
+.hero-photo::after{content:'';position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(to top,rgba(22,22,22,1) 0%,rgba(22,22,22,.78) 30%,rgba(22,22,22,0) 66%),
+             linear-gradient(to right,rgba(22,22,22,.55) 0%,rgba(22,22,22,0) 55%)}
+.hero-bg{display:block;width:100%;height:100%;object-fit:cover;object-position:62% 45%;filter:brightness(.78) contrast(1.05)}
+.hero-inner{position:relative;z-index:2;max-width:var(--max)}
+.meta{font-size:12px;letter-spacing:.24em;color:rgba(245,240,232,.8);margin-bottom:clamp(16px,2.6vh,24px);text-shadow:0 1px 12px rgba(0,0,0,.6)}
+.catch{font-family:'Noto Sans JP',sans-serif;font-weight:400;font-size:clamp(28px,6.2vw,50px);line-height:1.45;letter-spacing:.06em;margin-bottom:clamp(22px,3.6vh,34px);text-shadow:0 2px 18px rgba(0,0,0,.55)}
+.dates{list-style:none;margin-bottom:clamp(26px,4vh,38px)}
+.dates li{display:flex;gap:18px;align-items:baseline;font-size:clamp(14px,1.8vw,17px);letter-spacing:.06em;padding:7px 0;text-shadow:0 1px 12px rgba(0,0,0,.6)}
+.dates .d{font-weight:500;min-width:6.4em}
+.dates .d small{font-size:.72em;font-weight:400;color:var(--dim);margin-left:.4em;letter-spacing:.1em}
+.dates .p{color:rgba(245,240,232,.86)}
+.jump{display:inline-block;font-size:14px;letter-spacing:.14em;text-decoration:none;border:1px solid rgba(245,240,232,.5);padding:13px 26px;transition:color .4s,border-color .4s}
+.jump:hover{color:var(--accent);border-color:var(--accent)}
+
+/* ── body blocks ── */
+.block{padding:clamp(56px,11vh,110px) var(--gutter) 0}
+.block>.inner{max-width:var(--max)}
+.eyebrow{font-size:12px;font-weight:400;letter-spacing:.4em;text-transform:uppercase;color:var(--dim);margin-bottom:clamp(22px,3.4vh,32px)}
+.intro p{font-family:'Noto Sans JP',sans-serif;font-size:clamp(16px,2vw,19px);line-height:2;letter-spacing:.05em;color:rgba(245,240,232,.9)}
+.text-link{display:inline-block;margin-top:22px;font-size:14px;letter-spacing:.08em;color:var(--dim);text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:3px;transition:color .4s,border-color .4s}
+.text-link:hover{color:var(--accent);border-color:var(--accent)}
+
+/* tickets */
+.show{display:grid;grid-template-columns:minmax(0,210px) minmax(0,1fr);gap:clamp(20px,3.4vw,36px);align-items:start;padding:clamp(28px,4.6vh,40px) 0;border-top:1px solid var(--rule)}
+.show:last-of-type{border-bottom:1px solid var(--rule)}
+.show figure{aspect-ratio:3/4;overflow:hidden;background:#0f0f0f}
+.show img{width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block}
+.show .city{font-size:12px;letter-spacing:.3em;color:var(--dim);margin-bottom:10px}
+.show .date{font-size:clamp(20px,2.6vw,26px);font-weight:500;letter-spacing:.04em;line-height:1.4}
+.show .format{font-size:15px;letter-spacing:.08em;margin:4px 0 14px}
+.show .venue{font-size:15px;letter-spacing:.04em;color:rgba(245,240,232,.9)}
+.show .line{font-family:'Noto Sans JP',sans-serif;font-size:14.5px;line-height:1.9;letter-spacing:.04em;color:rgba(245,240,232,.8);margin:12px 0 10px}
+.show .detail{font-size:13px;letter-spacing:.05em;line-height:1.8;color:var(--dim);margin-bottom:18px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 28px;font-size:14px;letter-spacing:.1em;text-decoration:none;border:1px solid rgba(245,240,232,.55);color:var(--text);transition:color .4s,border-color .4s;background:none;font-family:inherit;cursor:pointer}
+.btn:hover{color:var(--accent);border-color:var(--accent)}
+
+/* crew */
+.crew h3,.log h3{font-family:'Noto Sans JP',sans-serif;font-weight:400;font-size:clamp(22px,3vw,28px);letter-spacing:.06em;margin-bottom:18px}
+.crew h3 .en,.log h3 .en{font-family:'Poppins',sans-serif;font-weight:500;letter-spacing:.02em}
+.crew h3 .en{color:var(--accent)}
+.crew p,.log p{font-family:'Noto Sans JP',sans-serif;font-size:15px;line-height:2;letter-spacing:.04em;color:rgba(245,240,232,.86)}
+.crew .note,.log .note{font-size:13px;line-height:1.9;color:var(--dim);margin-top:14px}
+.crew .price{font-family:'Poppins',sans-serif;font-size:clamp(22px,2.8vw,26px);font-weight:500;letter-spacing:.04em;margin:24px 0 18px;color:var(--text)}
+
+/* log form */
+.log-form{display:flex;gap:10px;margin-top:24px;max-width:460px}
+.log-form input[type="email"]{flex:1;min-width:0;min-height:48px;background:none;border:0;border-bottom:1px solid var(--rule);color:var(--text);font-family:inherit;font-size:16px;letter-spacing:.04em;padding:0 2px;outline:none;transition:border-color .4s}
+.log-form input[type="email"]:focus{border-color:rgba(245,240,232,.6)}
+.log-form input[type="email"]::placeholder{color:rgba(245,240,232,.45)}
+.log-form .btn:disabled{opacity:.45;cursor:default}
+.log-msg{font-family:'Noto Sans JP',sans-serif;font-size:13px;letter-spacing:.04em;line-height:1.8;margin-top:12px;color:#e08a8a}
+.log-msg:empty{display:none}
+.log-done .t{font-size:18px;font-weight:400;margin-top:24px}
+
+footer{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-top:clamp(72px,12vh,120px);padding:22px var(--gutter) 28px;border-top:1px solid var(--rule);font-size:12px;letter-spacing:.1em;color:var(--dim)}
+footer a{text-decoration:none;transition:color .4s}
+footer a:hover{color:var(--accent)}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(14px);animation:up 1.4s cubic-bezier(0.16,1,0.3,1) forwards}
+.r-1{animation-delay:.1s}.r-2{animation-delay:.25s}.r-3{animation-delay:.4s}.r-4{animation-delay:.55s}
+@keyframes up{to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.reveal{animation:none;opacity:1;transform:none}html{scroll-behavior:auto}}
+
+@media (max-width:640px){
+  .hero{min-height:auto;justify-content:flex-start;padding-top:0}
+  .hero-photo{position:relative;height:58svh;margin:0 calc(-1 * var(--gutter))}
+  .hero-photo::after{background:linear-gradient(to top,rgba(22,22,22,1) 0%,rgba(22,22,22,0) 42%)}
+  .hero-bg{object-position:68% 28%}
+  .hero-inner{margin-top:-5svh}
+  .dates li{gap:12px}
+  .show{grid-template-columns:minmax(0,1fr);gap:18px}
+  .show figure{aspect-ratio:4/3}
+  .btn{width:100%}
+  .log-form{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-photo"><img class="hero-bg" src="hero.webp" alt="ステージでキーボードを弾く Takahiro Izumikawa"></div>
+  <div class="hero-inner">
+    <p class="meta reveal r-1">Takahiro Izumikawa · Japan Tour 2026</p>
+    <h1 class="catch reveal r-2"><span class="nb">分からなくていい。</span><br><span class="nb">心を揺さぶられに来て。</span></h1>
+    <ul class="dates reveal r-3">
+      <li><span class="d">10.26<small>Mon</small></span><span class="p">Osaka · Piano Solo</span></li>
+      <li><span class="d">10.30<small>Fri</small></span><span class="p">Tokyo · Band</span></li>
+    </ul>
+    <a class="jump reveal r-4" href="#tickets">チケット ↓</a>
+  </div>
+</section>
+
+<section class="block intro">
+  <div class="inner">
+    <p><span class="nb">ニューヨークを拠点に、</span><span class="nb">その場で音楽を生み出すピアニスト。</span><br><span class="nb">大阪ではピアノ一台で、</span><span class="nb">東京ではバンドで。</span><br><span class="nb">東京の夜は、</span><span class="nb">新しいジャンル YATARA の</span><span class="nb">お披露目です。</span></p>
+    <a class="text-link" href="../yatara/?lang=ja">YATARA とは ↗&#xFE0E;</a>
+  </div>
+</section>
+
+<section class="block tickets" id="tickets">
+  <div class="inner">
+    <h2 class="eyebrow">Tickets</h2>
+
+    <article class="show">
+      <figure><img src="osaka.webp" alt="ピアノを弾く Takahiro Izumikawa" loading="lazy"></figure>
+      <div>
+        <p class="city">OSAKA</p>
+        <p class="date">10月26日（月）</p>
+        <p class="format">ピアノソロ</p>
+        <p class="venue">BLUE YARD</p>
+        <p class="line"><span class="nb">テーブル席で、</span><span class="nb">ピアノと向き合う夜。</span><span class="nb">気軽に、近くで。</span></p>
+        <p class="detail">時間・料金は会場の告知ページで公開予定</p>
+        <a class="btn" href="https://blue-yard.jp/" target="_blank" rel="noopener">会場ページ ↗&#xFE0E;</a>
+      </div>
+    </article>
+
+    <article class="show">
+      <figure><img src="tokyo.webp" alt="バンドで演奏する Takahiro Izumikawa と客席" loading="lazy"></figure>
+      <div>
+        <p class="city">TOKYO</p>
+        <p class="date">10月30日（金）</p>
+        <p class="format">バンド</p>
+        <p class="venue">晴れたら空に豆まいて（代官山）</p>
+        <p class="line"><span class="nb">新しいジャンル YATARA の</span><span class="nb">お披露目。</span><span class="nb">バンドで鳴らす夜。</span></p>
+        <p class="detail">OPEN 19:00 ／ 当日チケット ¥6,500</p>
+        <a class="btn" href="https://morethanmusicjapan.com/ja/collections/frontpage/products/261030sk" target="_blank" rel="noopener">チケット ↗&#xFE0E;</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="block crew" id="crew">
+  <div class="inner">
+    <h2 class="eyebrow">Crew</h2>
+    <h3><span class="en">Crew</span> に加わる</h3>
+    <p>10月30日 晴れたら空に豆まいて 公演のリハーサル見学と、デジタルコンテンツ（舞台裏・リハ動画・当日の演奏動画）が届く、クルー特典のチケットです。</p>
+    <p class="note">ライブのチケットは別にお求めください。当日来られない方の Crew のみのご購入も歓迎です（その場合はデジタルコンテンツのみのお届けになります）。リハーサル見学の時間は、決まり次第購入者の皆さんにお知らせします。</p>
+    <p class="price">¥10,000</p>
+    <a class="btn" href="#crew" id="crew-link">Join the Crew ↗&#xFE0E;</a>
+  </div>
+</section>
+
+<section class="block log" id="log">
+  <div class="inner" id="log-inner">
+    <h2 class="eyebrow">Log</h2>
+    <h3><span class="en">Log</span> を受け取る</h3>
+    <p>ツアー当日までの記録を、無料の便りでお届けします。当日へ向かう時間と空気感を共有します。</p>
+    <form class="log-form" id="log-form" action="https://app.kit.com/forms/9606457/subscriptions" method="post" novalidate>
+      <input type="email" name="email_address" placeholder="メールアドレス" aria-label="メールアドレス" autocomplete="email" required>
+      <input type="hidden" name="fields[language]" value="website JP">
+      <input type="hidden" name="fields[source]" id="f-source" value="tour-2026-10">
+      <input type="hidden" name="tags[]" value="20632889">
+      <button type="submit" class="btn">受け取る</button>
+    </form>
+    <p class="log-msg" id="log-msg" role="status"></p>
+    <p class="note">いつでも退会できます。各便りの末尾に退会リンクが付いています。</p>
+  </div>
+</section>
+
+<footer>
+  <a href="https://takahiroizumikawa.com/">Takahiro Izumikawa</a>
+  <span>photo · Stephanie Han</span>
+</footer>
+
+<script>
+(function(){
+  var src = new URLSearchParams(location.search).get('src');
+  if(src) document.getElementById('f-source').value = 'tour-2026-10:' + src.slice(0,40);
+
+  var form = document.getElementById('log-form');
+  var msg = document.getElementById('log-msg');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var email = form.querySelector('input[type="email"]');
+    if(!email.checkValidity()){ email.reportValidity(); return; }
+    var btn = form.querySelector('button');
+    btn.disabled = true; msg.textContent = '';
+    fetch(form.action, {
+      method:'POST',
+      headers:{'Content-Type':'application/x-www-form-urlencoded','Accept':'application/json'},
+      body:new URLSearchParams(new FormData(form)).toString()
+    })
+    .then(function(r){ if(!r.ok) throw new Error('http '+r.status); })
+    .then(function(){
+      form.outerHTML = '<div class="log-done"><p class="t">ありがとうございます</p><p>確認のメールをお送りしました。受信箱をご確認ください。</p></div>';
+    })
+    .catch(function(){
+      btn.disabled = false;
+      msg.textContent = '送信できませんでした。少し時間をおいて再度お試しください。';
+    });
+  });
+})();
+</script>
+</body>
+</html>
