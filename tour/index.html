@@ -19,7 +19,7 @@
 <!-- Google Fonts: Poppins (Alaya 02Design欧文書体) + Shippori Mincho（和文） -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600&family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
 
 <!-- Kit form handler: フォーム送信を AJAX で処理（LP内で完結） -->
 <script src="https://f.convertkit.com/ckjs/ck.5.js" defer></script>
@@ -608,8 +608,10 @@ footer {
 
 /* ===== 2026-10 追加（6月の型に足したもの） ===== */
 .hero-title-text{aspect-ratio:16/9;line-height:1;display:flex;flex-direction:column;align-items:flex-start;padding:clamp(28px,6vw,96px) var(--gutter) 0}
-.hero-title-text span{font-family:'Poppins',sans-serif;font-weight:500;font-size:clamp(64px,15vw,220px);letter-spacing:.02em;color:var(--text)}
-.hero-title-text .jp-sub{font-family:'Noto Sans JP',sans-serif;font-weight:300;font-size:clamp(16px,2.4vw,34px);letter-spacing:.62em;color:rgba(245,240,232,.75);margin-top:clamp(10px,1.4vw,22px)}
+/* 題字は Alaya のブランドカードの模様と同じ、端の粗い紙の質感に加工した画像（Poppins 500 / Noto Sans JP 300 を描画→端を加工・大きさは元の文字の箱と同じ比率） */
+.hero-title-text img{max-width:none}
+.hero-title-text .t-en{display:block;height:clamp(64px,15vw,220px);width:auto}
+.hero-title-text .t-jp{display:block;height:clamp(16px,2.4vw,34px);width:auto;margin-top:clamp(10px,1.4vw,22px);opacity:.8}
 .nb{display:inline-block}
 .live-photo{margin:0 0 clamp(28px,5vh,48px)}
 .live-photo img{display:block;width:100%;height:auto;filter:brightness(.9) contrast(1.05)}
@@ -628,7 +630,7 @@ footer {
 
 <!-- ===== HERO ===== -->
 <section class="hero">
-  <h1 class="hero-title hero-title-text reveal r-2"><span lang="en">YATARA</span><span class="jp-sub" lang="ja">夜　打　楽</span></h1>
+  <h1 class="hero-title hero-title-text reveal r-2"><img class="t-en" src="_assets/title-yatara.webp" width="1765" height="440" alt="YATARA"><img class="t-jp" src="_assets/title-yataraku.webp" width="1101" height="136" alt="夜打楽"></h1>
   <div class="hero-foot">
     <div class="hero-foot-left">
       <p class="hero-meta reveal r-1">Takahiro Izumikawa &#9642; Japan Tour 2026</p>
@@ -647,7 +649,7 @@ footer {
     <p class="catch reveal r-4"><span class="nb">分からなくていい。</span><span class="nb">ただ心を揺さぶられること。</span></p>
     <p class="hero-statement reveal r-4">
       ニューヨークを拠点にするピアニスト、Takahiro Izumikawa の日本公演。<br>
-      大阪はピアノ一台で。東京はフルバンドで、新しいジャンル <a href="https://takahiroizumikawa.com/yatara/?lang=ja" target="_blank" rel="noopener">YATARA</a> のお披露目です。
+      大阪はピアノ一台で。東京はフルバンドで、新しいジャンル <a href="https://takahiroizumikawa.com/yatara/?lang=ja" target="_blank" rel="noopener">YATARA</a> のお披露目。
     </p>
   </div>
 </section>
