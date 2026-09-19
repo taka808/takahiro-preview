@@ -626,6 +626,8 @@ footer {
 .crew-cta.is-pending:hover{background:none;color:var(--text-dim)}
 /* hitori-goto: 10月は先客の独り言が無いので、投稿0件のときは欄の高さを0にして空白を出さない */
 .hg-feed:empty{min-height:0}
+/* 320px などの狭い画面で公演日の3列目（Tokyo · YATARA Full Band）が画面外に出ないよう折り返す */
+@media (max-width:400px){.hero-subtitle{grid-template-columns:max-content max-content minmax(0,1fr)}.hero-subtitle .c{white-space:normal}}
 </style>
 </head>
 <body>
