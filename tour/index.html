@@ -606,6 +606,13 @@ footer {
 /* 320px などの狭い画面で公演日の3列目（Tokyo · YATARA Full Band）が画面外に出ないよう折り返す */
 /* 320px では題字の最後の A が背景の模様に重なるので、狭い画面だけ少し小さくする（2026-09-19） */
 @media (max-width:360px){.hero-title-text .t-main{height:56px}}
+/* スマホ（縦）: 写真の高さと文字を詰めて、紹介文の最後まで最初の画面に入れる（2026-09-19 HASHIRA） */
+@media (max-width:640px){
+  .hero{min-height:44svh}
+  .statement-block{padding-top:clamp(18px,2.6vh,28px);padding-bottom:10px}
+  .catch{font-size:clamp(19px,5.2vw,24px);line-height:1.62;margin-bottom:14px}
+  .hero-statement{font-size:13.5px;line-height:1.85}
+}
 </style>
 </head>
 <body>
