@@ -143,7 +143,7 @@ section {
 .hero > img.hero-photo {   /* ライブ写真をヘッダーの背景に（2026-09-19）。`.hero > *` の position:relative に負けないよう子セレクタで指定 */
   position: absolute; inset: 0; width: 100%; height: 100%;
   object-fit: cover; object-position: 50% 50%;
-  filter: brightness(.58) contrast(1.06) grayscale(.85);   /* 2026-09-20: 写真を「上から鍵盤」に差し替え。赤はブランド上1色（題字の丸）に保つため完全モノクロ */
+  filter: brightness(.58) contrast(1.06) grayscale(.15);   /* 2026-09-20 HASHIRA〈色のままで〉 */   /* 2026-09-20: 写真を「上から鍵盤」に差し替え。赤はブランド上1色（題字の丸）に保つため完全モノクロ */
   z-index: 0; pointer-events: none;
 }
 .hero::before {          /* Alaya のブランドカードの模様（透過）を右に重ねる */
