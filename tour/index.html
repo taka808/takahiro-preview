@@ -604,6 +604,8 @@ footer {
 /* 320px などの狭い画面で公演日の3列目（Tokyo · YATARA Full Band）が画面外に出ないよう折り返す */
 /* 320px では題字の最後の A が背景の模様に重なるので、狭い画面だけ少し小さくする（2026-09-19） */
 @media (max-width:360px){.hero-title-text .t-main{height:56px}}
+/* 320px 級では模様を 76%→62% に戻す（76% のままだと題字の最後の A に重なって文字が隠れる・2026-09-20 独立レビューと ZA が実測） */
+@media (max-width:360px){.hero::before{background-size:auto 62%}}
 /* スマホ（縦）: 写真の高さと文字を詰めて、紹介文の最後まで最初の画面に入れる（2026-09-19 HASHIRA） */
 @media (max-width:640px){
   .hero{min-height:44svh}
@@ -676,7 +678,7 @@ footer {
               <span class="date">10月26日（月）　ピアノソロ</span>
             </div>
             <div class="venue-name">Blue Yard</div>
-            <div class="ease"><span class="nb">ピアノ１台でトーク＆ライブ</span><br>音楽の歴史と秋のジャズスタンダードを聴きながら、<br>ジャズがどう日本のリズムと融合し新しいジャンルYATARAになるかをゆったり体験する。</div>
+            <div class="ease"><span class="nb">ピアノ１台でトーク＆ライブ</span><br><span class="nb">音楽の歴史と</span><span class="nb">秋のジャズスタンダードを</span><span class="nb">聴きながら、</span><br><span class="nb">ジャズがどう</span><span class="nb">日本のリズムと融合し</span><span class="nb">新しいジャンルYATARAになるかを</span><span class="nb">ゆったり体験する。</span></div>
           </div>
           <span class="ticket-link">Venue</span>
         </a>
