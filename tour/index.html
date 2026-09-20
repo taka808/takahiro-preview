@@ -154,8 +154,8 @@ section {
   inset: 0;
   z-index: 1;
   background-image: url("_assets/pattern.png");
-  background-size: auto 104%;
-  background-position: right -40px center;
+  background-size: auto 92%;
+  background-position: right clamp(28px,3.4vw,72px) center;   /* 右端に少し余白（2026-09-19 HASHIRA） */
   background-repeat: no-repeat;
   opacity: 1;
   pointer-events: none;
@@ -547,8 +547,8 @@ footer {
 
   /* スマホ: 模様は上の右だけに小さく出し、文字が始まる手前で消す（2026-09-19） */
   .hero::before {                      /* スマホは題字（YATARA）の横に置く。多少重なってよい（2026-09-19 HASHIRA） */
-    background-size: auto 34%;
-    background-position: right -14px top 8px;
+    background-size: auto 54%;
+    background-position: right -10px top 4px;
     opacity: 1;
   }
   .hero::after {
