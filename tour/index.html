@@ -596,8 +596,6 @@ footer {
 .ticket-row .ease{font-size:14px;color:rgba(245,240,232,.72)}
 .ticket-row .detail{font-family:var(--font-jp);font-size:14px;letter-spacing:.04em;color:var(--text);margin-top:2px}
 .crew-note{font-family:var(--font-jp);font-size:14px;line-height:1.95;color:rgba(245,240,232,.72);max-width:560px;margin:0 0 24px}
-.crew-cta.is-pending{color:var(--text-dim);border-color:var(--rule);cursor:default}
-.crew-cta.is-pending:hover{background:none;color:var(--text-dim)}
 /* hitori-goto: 10月は先客の独り言が無いので、投稿0件のときは欄の高さを0にして空白を出さない */
 .hg-feed:empty{min-height:0}
 /* 320px などの狭い画面で公演日の3列目（Tokyo · YATARA Full Band）が画面外に出ないよう折り返す */
@@ -702,7 +700,7 @@ footer {
         <span class="nb">舞台裏・リハ動画・演奏動画など、</span><br>
         <span class="nb">クルーにだけ届くデジタルコンテンツ。</span>
       </p>
-      <span class="crew-cta is-pending reveal r-4">Join the Crew — 近日販売</span>
+      <a class="crew-cta reveal r-4" href="https://livepocket.jp/e/yk9nh" target="_blank" rel="noopener">Join the Crew</a>
     </article>
 
   </div>
