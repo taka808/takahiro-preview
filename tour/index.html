@@ -188,47 +188,6 @@ section {
   -webkit-user-drag: none;
 }
 
-/* Foot: メタ+subtitle を画像の下に配置 */
-.hero-foot {
-  position: relative;
-  z-index: 3;
-  margin-top: clamp(22px, 5vh, 56px);      /* 題字（夜打楽）のすぐ下＝写真の中ほど */
-  padding: clamp(20px, 3vh, 32px) var(--gutter) clamp(40px, 6vh, 64px);
-  display: flex;
-  align-items: flex-start;
-}
-.hero-foot-left {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  align-items: flex-start;
-}
-.hero-meta {
-  font-family: var(--font-en);
-  font-size: clamp(13px, 1.5vw, 16px);
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-  color: var(--text);
-  margin: 0;
-}
-.hero-subtitle {
-  font-family: var(--font-en);
-  font-size: clamp(12px, 1.3vw, 14px);
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-  color: var(--text-dim);
-  font-weight: 400;
-  display: inline-grid;
-  grid-template-columns: max-content max-content max-content;
-  column-gap: 0.8em;
-  row-gap: 8px;
-  align-items: baseline;
-  margin: 0;
-}
-.hero-subtitle .d {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
 .statement-block {
   padding-top: clamp(48px, 8vh, 96px);
   padding-bottom: clamp(24px, 4vh, 48px);
@@ -587,9 +546,9 @@ footer {
   body { font-size: 14px; }
 
   /* スマホ: 模様は上の右だけに小さく出し、文字が始まる手前で消す（2026-09-19） */
-  .hero::before {                      /* スマホは文字が画面幅いっぱいまで来るので、模様は文字より下に置く */
-    background-size: auto 46%;
-    background-position: right -18px bottom 4%;
+  .hero::before {                      /* スマホは題字（YATARA）の横に置く。多少重なってよい（2026-09-19 HASHIRA） */
+    background-size: auto 34%;
+    background-position: right -14px top 8px;
     opacity: 1;
   }
   .hero::after {
@@ -604,11 +563,6 @@ footer {
   }
   .ticket-link { justify-self: start; }
 
-  .hero-foot {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 24px;
-  }
   .hero-statement { max-width: 100%; }
 
   .footer-inner {
@@ -651,7 +605,6 @@ footer {
 /* 320px などの狭い画面で公演日の3列目（Tokyo · YATARA Full Band）が画面外に出ないよう折り返す */
 /* 320px では題字の最後の A が背景の模様に重なるので、狭い画面だけ少し小さくする（2026-09-19） */
 @media (max-width:360px){.hero-title-text .t-main{height:56px}}
-@media (max-width:400px){.hero-subtitle{display:block}.hero-subtitle .m{margin-right:.45em}.hero-subtitle .d{margin-right:.55em}.hero-subtitle .c{display:inline;white-space:normal}.hero-subtitle .c::after{content:"\A";white-space:pre}}
 </style>
 </head>
 <body>
@@ -660,15 +613,6 @@ footer {
 <section class="hero">
   <img class="hero-photo" src="_assets/live.webp" width="1600" height="1067" alt="ステージで演奏する Takahiro Izumikawa">
   <h1 class="hero-title hero-title-text reveal r-2"><img class="t-main" src="_assets/title-yatara-redbar.webp" width="1765" height="440" alt="YATARA"><span class="t-sub" lang="ja">夜　打　楽</span></h1>
-  <div class="hero-foot">
-    <div class="hero-foot-left">
-      <p class="hero-meta reveal r-1">Takahiro Izumikawa &#9642; Japan Tour 2026</p>
-      <div class="hero-subtitle reveal r-3" aria-label="Tour dates">
-        <span class="m">Oct</span><span class="d">26</span><span class="c">&middot; Osaka &middot; Piano Solo</span>
-        <span class="m">Oct</span><span class="d">30</span><span class="c">&middot; Tokyo &middot; YATARA Full Band</span>
-      </div>
-    </div>
-  </div>
 </section>
 
 <!-- ===== STATEMENT (HERO直後・タイトル画像と被らない単独セクション) ===== -->
@@ -676,8 +620,8 @@ footer {
   <div class="container">
     <p class="catch reveal r-4"><span class="nb">分からなくていい。</span><span class="nb">ただ心を揺さぶられること。</span></p>
     <p class="hero-statement reveal r-4">
-      ニューヨークを拠点にするピアニスト、Takahiro Izumikawa の日本公演。<br>
-      大阪はピアノ一台で。東京はフルバンドで、新しいジャンル <a href="https://takahiroizumikawa.com/yatara/?lang=ja" target="_blank" rel="noopener">YATARA</a> のお披露目。
+      <span class="nb">ニューヨークを拠点にするピアニスト、</span><span class="nb">Takahiro Izumikawa の日本公演。</span><br>
+      <span class="nb">10月26日、大阪はピアノ一台で。</span><span class="nb">30日東京はフルバンドで、</span><span class="nb">新しいジャンル <a href="https://takahiroizumikawa.com/yatara/?lang=ja" target="_blank" rel="noopener">YATARA</a> のお披露目。</span>
     </p>
   </div>
 </section>
