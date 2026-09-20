@@ -587,7 +587,8 @@ footer {
    上の2割は不透明、そこから下端で10%まで＝案 C を採用（画像の上下に余白があるので文字の下端は約25%）。
    夜打楽 は普通の文字で小さく（本拠地 yatara/index.html の .jp-sub と同じ組み方） */
 .hero-title-text img{max-width:none}
-/* 題字 YATARA: Poppins 500 を描き、最初の A の横棒を赤い丸に置き換えた画像（access art studio のロゴの o と同じ考え方）。下へ薄くなるグラデは画像に焼き込み済み（赤い丸は薄くしない） */
+/* 題字 YATARA: Poppins 500 を描き、最初の A の横棒を赤い丸に置き換えた画像（access art studio のロゴの o と同じ考え方）。下へ薄くなるグラデは画像に焼き込み済み（赤い丸は薄くしない）。
+   赤い丸の縁（v2.1）に加えて、Y・T・R の3文字の縁も紙のようにガタつかせてある（v2.6・A 3つは平らなまま＝_prototypes/letter_rough.py） */
 .hero-title-text .t-main{display:block;height:clamp(64px,15vw,220px);width:auto;max-width:none}
 .hero-title-text .t-sub{display:block;font-family:'Noto Sans JP',sans-serif;font-weight:300;font-size:clamp(15px,2vw,28px);letter-spacing:.62em;color:rgba(245,240,232,.85);margin-top:clamp(14px,1.8vw,26px)}
 .nb{display:inline-block}
@@ -620,7 +621,7 @@ footer {
 <!-- ===== HERO ===== -->
 <section class="hero">
   <img class="hero-photo" src="_assets/hero-grand.webp" width="1600" height="1082" alt="グランドピアノを真上から見下ろしたところ。演奏する Takahiro Izumikawa">
-  <h1 class="hero-title hero-title-text reveal r-2"><img class="t-main" src="_assets/title-yatara-redbar-rough.webp" width="1765" height="440" alt="YATARA"><span class="t-sub" lang="ja">夜　打　楽</span></h1>
+  <h1 class="hero-title hero-title-text reveal r-2"><img class="t-main" src="_assets/title-yatara-ytr-rough.webp" width="1765" height="440" alt="YATARA"><span class="t-sub" lang="ja">夜　打　楽</span></h1>
 </section>
 
 <!-- ===== STATEMENT (HERO直後・タイトル画像と被らない単独セクション) ===== -->
