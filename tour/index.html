@@ -546,9 +546,9 @@ footer {
 
   /* スマホ: 模様は上の右だけに小さく出し、文字が始まる手前で消す（2026-09-19） */
   .hero::before {                      /* スマホは題字（YATARA）の横に置く。多少重なってよい（2026-09-19 HASHIRA） */
-    background-image: url("_assets/pattern-mobile.png");   /* スマホは細い1列だけ使い、題字に食い込ませない */
-    background-size: auto 58%;
-    background-position: right -6px top 6px;
+    /* スマホは模様を切らずに全体を小さく置く（切ると線が途中で切れて汚くなる・2026-09-19） */
+    background-size: auto 42%;
+    background-position: right 8px top 10px;
     opacity: 1;
   }
   .hero::after {
