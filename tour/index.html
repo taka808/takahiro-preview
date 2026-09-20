@@ -152,7 +152,7 @@ section {
   inset: 0;
   z-index: 1;
   background-image: url("_assets/pattern.png");
-  background-size: auto 92%;
+  background-size: auto 108%;   /* 2026-09-20 HASHIRA〈抽象デザインもう少し大きく〉 92%→108% */
   background-position: right clamp(28px,3.4vw,72px) center;   /* 右端に少し余白（2026-09-19 HASHIRA） */
   background-repeat: no-repeat;
   opacity: 1;
@@ -380,7 +380,13 @@ section {
   gap: 32px;
   align-items: end;
   padding: 36px 0;
+  /* 行全体がリンク（本拠地 music.html の .release と同じ型・2026-09-20） */
+  color: inherit;
+  text-decoration: none;
 }
+.ticket-row:hover .ticket-link { color: var(--accent); border-color: var(--accent); }
+.ticket-row:hover .venue-name { color: #ffffff; }
+.ticket-row:focus-visible { outline: 2px solid var(--accent); outline-offset: 6px; }
 .ticket-row:first-child { padding-top: 8px; }
 .ticket-info {
   display: flex;
@@ -427,6 +433,7 @@ section {
   max-width: 460px;
 }
 .ticket-link {
+  display: inline-block;
   color: var(--text);
   text-decoration: none;
   font-family: var(--font-en);
@@ -438,10 +445,7 @@ section {
   transition: color 0.4s ease, border-color 0.4s ease;
   white-space: nowrap;
 }
-.ticket-link:hover {
-  color: var(--accent);
-  border-color: var(--accent);
-}
+/* ホバーは行全体で効かせる（.ticket-row:hover）。単独指定は残さない */
 
 /* Crew Ticket — accent placement (only on "Crew Ticket" span, not the entire title) */
 .crew-cta {
@@ -545,7 +549,7 @@ footer {
   /* スマホ: 模様は上の右だけに小さく出し、文字が始まる手前で消す（2026-09-19） */
   .hero::before {                      /* スマホは題字（YATARA）の横に置く。多少重なってよい（2026-09-19 HASHIRA） */
     /* スマホは模様を切らずに全体を小さく置く（切ると線が途中で切れて汚くなる・2026-09-19） */
-    background-size: auto 62%;
+    background-size: auto 76%;   /* 2026-09-20 HASHIRA〈もう少し大きく〉 62%→76% */
     background-position: right 6px top 6px;
     opacity: 1;
   }
@@ -665,19 +669,19 @@ footer {
       <h2 class="entry-title reveal r-2"><span class="en">Tickets</span>を取る</h2>
 
       <div class="tickets-grid reveal r-3">
-        <div class="ticket-row">
+        <!-- 1公演 = <a class="ticket-row"> 全体がリンク（本拠地 music.html の .release と同じ型・2026-09-20 HASHIRA〈Ticket リンクは情報全体クリックできるように〉） -->
+        <a class="ticket-row" href="https://blue-yard.jp/" target="_blank" rel="noopener">
           <div class="ticket-info">
             <div class="ticket-meta">
               <span class="city">大阪</span>
               <span class="date">10月26日（月）　ピアノソロ</span>
             </div>
             <div class="venue-name">Blue Yard</div>
-            <div class="ease">テーブル席で、ピアノと向き合う夜。気軽に、近くで。</div>
-            <div class="detail">時間・料金・チケットは会場から近日公開</div>
+            <div class="ease"><span class="nb">ピアノ１台でトーク＆ライブ</span><br>音楽の歴史と秋のジャズスタンダードを聴きながら、ジャズがどう日本のリズムと融合し新しいジャンルYATARAになるかをゆったり体験する。</div>
           </div>
-          <a href="https://blue-yard.jp/" target="_blank" rel="noopener" class="ticket-link">Venue</a>
-        </div>
-        <div class="ticket-row">
+          <span class="ticket-link">Venue</span>
+        </a>
+        <a class="ticket-row" href="https://morethanmusicjapan.com/ja/collections/frontpage/products/261030sk" target="_blank" rel="noopener">
           <div class="ticket-info">
             <div class="ticket-meta">
               <span class="city">東京</span>
@@ -686,8 +690,8 @@ footer {
             <div class="venue-name">晴れたら空に豆まいて</div>
             <div class="ease">新しいジャンル YATARA のお披露目。フルバンドで鳴らす夜。</div>
           </div>
-          <a href="https://morethanmusicjapan.com/ja/collections/frontpage/products/261030sk" target="_blank" rel="noopener" class="ticket-link">Tickets</a>
-        </div>
+          <span class="ticket-link">Tickets</span>
+        </a>
       </div>
     </article>
 
@@ -878,7 +882,7 @@ body { padding-bottom: calc(180px + env(safe-area-inset-bottom, 0px)); }
     var u = isUnlocked();
     textEl.disabled = !u; nameEl.disabled = !u; submitEl.disabled = !u;
     gateEl.classList.toggle('hide', u);
-    textEl.placeholder = u ? '独り言を書く' : 'Logを受け取ると、ここに書けます。';
+    textEl.placeholder = '独り言を書く';   /* 2026-09-20 HASHIRA指示で常に同じ文言に */
   }
 
   /* soft-gate解放（blocker対策）: Kitフォームは現在 action:message（遷移なし）のため
