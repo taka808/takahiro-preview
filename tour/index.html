@@ -683,15 +683,13 @@ footer {
 .ticket-link{
   display:inline-flex; align-items:center; justify-content:center; gap:.7em;
   min-height:52px; padding:0 24px; padding-bottom:0; box-sizing:border-box;
-  font-family:var(--font-jp); font-size:14px; letter-spacing:.20em; text-transform:none;
-  border:1px solid rgba(245,240,232,.40);
+  font-family:var(--font-jp); font-size:14px; letter-spacing:.20em; text-transform:none; font-weight:500;
+  background:var(--text); color:var(--bg); border:1px solid var(--text);
   transition:background .35s ease, color .35s ease, border-color .35s ease;
 }
-.ticket-row:hover .ticket-link{ background:var(--text); color:var(--bg); border-color:var(--text); }
-/* 赤は「実際に買える1箇所」だけ（大阪は会場サイトへ行くだけなので枠のまま）。
-   Crew の赤い枠ボタンと合わせて、赤＝入口の印で揃える */
-.ticket-row:last-child .ticket-link{ background:var(--accent); color:#fff; border-color:var(--accent); font-weight:500; }
-.ticket-row:last-child:hover .ticket-link{ background:#f03038; border-color:#f03038; color:#fff; }
+/* 赤（--accent）はここでは使わない＝Crew のために取ってある（HASHIRA 2026-09-21〈赤いボタンは crew 用に取っておいて。前も決めたように〉）。
+   2公演は同じ見た目にする（HASHIRA〈会場とチケットは、そんなに厳密に分けなくていい。すぐ新しいリンクを入れるので〉） */
+.ticket-row:hover .ticket-link{ background:#ffffff; border-color:#ffffff; color:var(--bg); }
 /* スマホ: 帯を画面の端まで伸ばす。枠を内側に置くと説明文の欄が狭くなり、1行に入らなくなるため */
 @media (max-width:768px){
   .ticket-row{
