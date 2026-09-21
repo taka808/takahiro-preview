@@ -671,24 +671,27 @@ footer {
    変更前の実測（375px）: ボタンの当たり 56x27px（基準未満）・公演2つの間に区切りなし・ラベルは VENUE。 */
 .tickets-grid{ gap:16px; margin-top:22px; }
 .ticket-row{
-  border:1px solid rgba(245,240,232,.20);
-  background:rgba(245,240,232,.085);
+  border:1px solid rgba(245,240,232,.10);
+  background:var(--bg-deeper);
   padding:clamp(22px,3.4vw,30px);
   gap:24px;
   transition:background .35s ease, border-color .35s ease;
 }
 .ticket-row:first-child{ padding-top:clamp(22px,3.4vw,30px); }
-.ticket-row:hover{ background:rgba(245,240,232,.13); border-color:rgba(245,240,232,.34); }
-.ticket-row:active{ background:rgba(245,240,232,.17); }   /* 触る画面の「押した」合図 */
+.ticket-row:hover{ background:#0a0a0a; border-color:rgba(245,240,232,.22); }
+.ticket-row:active{ background:#080808; }   /* 触る画面の「押した」合図 */
 .ticket-link{
   display:inline-flex; align-items:center; justify-content:center; gap:.7em;
   min-height:52px; padding:0 24px; padding-bottom:0; box-sizing:border-box;
-  font-family:var(--font-jp); font-size:14px; letter-spacing:.12em; text-transform:none;
-  border:1px solid rgba(245,240,232,.45);
+  font-family:var(--font-jp); font-size:14px; letter-spacing:.20em; text-transform:none;
+  border:1px solid rgba(245,240,232,.40);
   transition:background .35s ease, color .35s ease, border-color .35s ease;
 }
-.ticket-link::after{ content:"\2197"; font-family:-apple-system,'Hiragino Sans',sans-serif; font-size:.95em; opacity:.75; }
 .ticket-row:hover .ticket-link{ background:var(--text); color:var(--bg); border-color:var(--text); }
+/* 赤は「実際に買える1箇所」だけ（大阪は会場サイトへ行くだけなので枠のまま）。
+   Crew の赤い枠ボタンと合わせて、赤＝入口の印で揃える */
+.ticket-row:last-child .ticket-link{ background:var(--accent); color:#fff; border-color:var(--accent); font-weight:500; }
+.ticket-row:last-child:hover .ticket-link{ background:#f03038; border-color:#f03038; color:#fff; }
 /* スマホ: 帯を画面の端まで伸ばす。枠を内側に置くと説明文の欄が狭くなり、1行に入らなくなるため */
 @media (max-width:768px){
   .ticket-row{
@@ -697,7 +700,7 @@ footer {
     margin-left:calc(var(--gutter) * -1); margin-right:calc(var(--gutter) * -1);
     border-left:0; border-right:0;
   }
-  .ticket-link{ width:100%; justify-self:stretch; }
+  .ticket-link{ width:auto; justify-self:start; min-width:168px; }
 }
 /* スマホの説明文は6月と同じ 13px に戻す（10月で 14px にしたため、
    『音楽の歴史と秋のジャズスタンダードを聴きながら、』が実測 353px＞欄 327px で溢れ、
@@ -776,7 +779,7 @@ footer {
             <div class="venue-name">Blue Yard</div>
             <div class="ease"><span class="nb">ピアノ１台でトーク＆ライブ</span><br><span class="nb">音楽の歴史と</span><span class="nb">秋のジャズスタンダードを</span><span class="nb">聴きながら、</span><br><span class="nb">ジャズがどう</span><span class="nb">日本のリズムと融合し</span><span class="nb">新しいジャンル</span><span class="nb">YATARAになるかを</span><span class="nb">ゆったり体験する。</span></div>
           </div>
-          <span class="ticket-link">会場サイトへ</span>
+          <span class="ticket-link">会場サイト</span>
         </a>
         <a class="ticket-row" href="https://morethanmusicjapan.com/ja/collections/frontpage/products/261030sk" target="_blank" rel="noopener">
           <div class="ticket-info">
@@ -787,7 +790,7 @@ footer {
             <div class="venue-name">晴れたら空に豆まいて</div>
             <div class="ease">新しいジャンル YATARA のお披露目。</div>
           </div>
-          <span class="ticket-link">チケットを取る</span>
+          <span class="ticket-link">チケット</span>
         </a>
       </div>
     </article>
