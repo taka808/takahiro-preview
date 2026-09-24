@@ -58,9 +58,9 @@ section{position:relative;z-index:2;padding-left:var(--gutter);padding-right:var
 .hero-meta{max-width:540px;margin:clamp(28px,4vh,40px) 0 0 auto;font-family:var(--font-en);font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--dim)}
 
 /* LINE スタンプ＝誘うときの道具 — 10月ツアー LP（../LP/index.html v3.4 の .stamp-row）をそのまま写した（2026-09-24 HASHIRA〈メインの LP と同じように、クルーの LP にも追加して〉）。
-   置き場所は LP と同じ考え方＝2公演の直下（LP は Tickets の2公演・ここは日付の2行）。変えたのは2点だけ:
-   ①位置合わせ＝LP のチケット枠の内側余白の代わりに、日付と同じ右寄せ 540px の欄に揃える ②太さ＝LP の本文の実効値 400 を明示（このページの本文は 300）。書体はこのページの和文（Noto Sans JP） */
-.stamp-row{display:grid;grid-template-columns:auto 1fr auto;gap:20px;align-items:center;max-width:540px;margin:32px 0 0 auto;color:inherit;text-decoration:none}
+   置き場所は記録（エントリ）の最後・独り言の上（2026-09-24 HASHIRA〈LINEスタンプが上に出るのはおかしい。一番下でいいですよ。それか独り言の上。〉）。変えたのは2点だけ:
+   ①位置合わせ＝LP のチケット枠の内側余白の代わりに、エントリの本文と同じ左寄せ 540px の欄に揃える ②太さ＝LP の本文の実効値 400 を明示（このページの本文は 300）。書体はこのページの和文（Noto Sans JP） */
+.stamp-row{display:grid;grid-template-columns:auto 1fr auto;gap:20px;align-items:center;max-width:540px;margin:0;color:inherit;text-decoration:none}
 .stamp-row img{display:block;width:96px;height:auto}
 .stamp-copy{font-family:var(--font-jp);font-weight:400;line-height:1.8}
 .stamp-lead{display:block;font-size:15px;letter-spacing:.06em;color:var(--text)}
@@ -161,15 +161,6 @@ footer{position:relative;z-index:2;padding:clamp(24px,3vh,40px) var(--gutter) ca
       <span class="nb">ここから先は、新しいジャンルと</span><span class="nb">10月30日のライブまでの制作の内側です。</span>
     </p>
     <p class="hero-meta reveal r-4">Osaka &middot; October 26, 2026<br>Tokyo &middot; October 30, 2026</p>
-    <!-- LINE スタンプ（誘うときの道具）。10月ツアー LP v3.4 と同じ絵・文言・リンク。行全体がリンク -->
-    <a class="stamp-row reveal r-4" href="https://line.me/S/sticker/36785673?_from=lcm" target="_blank" rel="noopener">
-      <img src="_assets/stamp-live.webp" width="288" height="249" alt="LINEスタンプ「ライブ行く？」" loading="lazy">
-      <span class="stamp-copy">
-        <span class="stamp-lead"><span class="nb">誘うときは、</span><span class="nb">ツアー記念スタンプで。</span></span>
-        <span class="stamp-sub"><span class="nb">会場には、</span><span class="nb">同じデザインの</span><span class="nb">ステッカーがあります。</span></span>
-      </span>
-      <span class="stamp-link">LINEスタンプ</span>
-    </a>
   </div>
 </section>
 
@@ -216,6 +207,17 @@ footer{position:relative;z-index:2;padding:clamp(24px,3vh,40px) var(--gutter) ca
         <p>拍をずらし、重ね、叩きながら削っていく。残ったのは、前回のリズムとつながる、隙間のあるかたち。ベースはこれから。</p>
       </div>
     </article>
+
+    <!-- 新しいエントリはこのコメントより上に足す（スタンプの行は記録の最後・独り言の上＝ test_crew_log.py が照合）
+         LINE スタンプ（誘うときの道具）。10月ツアー LP v3.4 と同じ絵・文言・リンク。行全体がリンク -->
+    <a class="stamp-row fade-on-scroll" href="https://line.me/S/sticker/36785673?_from=lcm" target="_blank" rel="noopener">
+      <img src="_assets/stamp-live.webp" width="288" height="249" alt="LINEスタンプ「ライブ行く？」" loading="lazy">
+      <span class="stamp-copy">
+        <span class="stamp-lead"><span class="nb">誘うときは、</span><span class="nb">ツアー記念スタンプで。</span></span>
+        <span class="stamp-sub"><span class="nb">会場には、</span><span class="nb">同じデザインの</span><span class="nb">ステッカーがあります。</span></span>
+      </span>
+      <span class="stamp-link">LINEスタンプ</span>
+    </a>
 
   </div>
 </section>
