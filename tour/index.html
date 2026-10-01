@@ -671,10 +671,6 @@ footer {
 .origin-video{display:block;width:min(100%,360px);height:auto;aspect-ratio:9/16;background:var(--bg)}
 @media (max-width:640px){.origin-video{width:min(100%,calc(90svh * 9 / 16))}}
 
-.ticket-row.is-soldout,
-.ticket-row.is-soldout:hover,
-.ticket-row.is-soldout:active{ background:var(--bg-deeper); border-color:rgba(245,240,232,.10); cursor:default; }
-.ticket-row.is-soldout:hover .venue-name{ color:var(--text); }
 .soldout{
   font-family:var(--font-en); font-weight:500;
   font-size:clamp(30px,4.2vw,48px); line-height:1; letter-spacing:.12em;
@@ -753,7 +749,7 @@ footer {
           </div>
         </a>
         
-        <div class="ticket-row is-soldout">
+        <a class="ticket-row is-soldout" href="https://morethanmusicjapan.com/ja/collections/frontpage/products/261030sk" target="_blank" rel="noopener">
           <div class="ticket-info">
             <div class="ticket-meta">
               <span class="city">東京</span>
@@ -763,7 +759,7 @@ footer {
             <div class="ease">新しいジャンル YATARA のお披露目。</div>
           </div>
           <span class="soldout" lang="en">SOLD OUT</span>
-        </div>
+        </a>
       </div>
 
       
