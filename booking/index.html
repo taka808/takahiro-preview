@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Booking — Takahiro Izumikawa</title>
+<meta name="description" content="Booking one-sheet for Takahiro Izumikawa — Off Sync live.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Booking — Takahiro Izumikawa">
+<meta property="og:description" content="Off Sync live — booking one-sheet.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://takahiroizumikawa.com/booking/">
+<meta property="og:image" content="https://takahiroizumikawa.com/booking/press-01.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<script>(function(){var q=new URLSearchParams(location.search).get("lang");var l=q==="ja"||q==="en"?q:"en";document.documentElement.setAttribute("data-lang",l);document.documentElement.setAttribute("lang",l==="ja"?"ja":"en")})()</script>
+<style>
+:root{
+  --bg:#161616; --text:#f5f0e8;
+  --dim:rgba(245,240,232,.55); --faint:rgba(245,240,232,.32);
+  --accent:#db2626; --rule:rgba(245,240,232,.14);
+  --font:'Poppins','Noto Sans JP',sans-serif;
+  --gutter:clamp(24px,5vw,64px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--text);font-family:var(--font);font-weight:300;-webkit-font-smoothing:antialiased}
+body{min-height:100vh;display:flex;flex-direction:column;overflow-x:hidden;letter-spacing:.02em}
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:5;opacity:.08;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.96 0 0 0 0 0.94 0 0 0 0 0.91 0 0 0 0.5 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")
+}
+
+
+.l-ja{display:none}
+html[data-lang="ja"] .l-ja{display:revert}
+html[data-lang="ja"] .l-en{display:none}
+html[data-lang="ja"] body{letter-spacing:.01em}
+
+nav.top{
+  position:relative;z-index:3;
+  display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;
+  padding:clamp(18px,2.6vh,28px) var(--gutter)
+}
+nav.top .wordmark{font-size:12px;letter-spacing:.14em;color:var(--dim);font-weight:400;text-decoration:none}
+nav.top .right{display:flex;align-items:center;gap:clamp(14px,2.4vw,26px)}
+nav.top .links{display:flex;gap:clamp(14px,2.4vw,26px)}
+nav.top .links a{font-size:12px;letter-spacing:.1em;color:rgba(245,240,232,.85);text-decoration:none;transition:color .4s}
+nav.top .links a:hover{color:var(--accent)}
+.lang-sw{display:flex;gap:10px;border-left:1px solid var(--rule);padding-left:clamp(14px,2.4vw,26px)}
+.lang-sw a{font-size:12px;letter-spacing:.1em;color:var(--faint);text-decoration:none;transition:color .4s;cursor:pointer}
+.lang-sw a:hover{color:var(--accent)}
+.lang-sw a.on{color:var(--text)}
+
+main{flex:1;padding:clamp(40px,7vh,72px) var(--gutter)}
+.wrap{max-width:600px;margin:0 auto;width:100%}
+
+.eyebrow{font-size:12px;letter-spacing:.4em;text-transform:uppercase;color:var(--dim);margin-bottom:22px;font-weight:300}
+.name-head{font-size:clamp(30px,5vw,52px);font-weight:500;letter-spacing:.005em;line-height:1.1;color:var(--text);margin-bottom:10px}
+.lead{font-size:clamp(19px,2.4vw,25px);font-weight:300;line-height:1.5;color:var(--text);max-width:34ch;margin-bottom:clamp(22px,3.5vh,32px)}
+html[data-lang="ja"] .lead{line-height:1.65;max-width:100%}
+
+.lead .mark{color:var(--accent);white-space:nowrap}
+
+.lead .nb{display:inline-block}
+.body p{font-size:clamp(14.5px,1.55vw,16px);font-weight:300;line-height:1.85;color:rgba(245,240,232,.86);margin-bottom:1.5em;max-width:60ch}
+.body p .ttl{font-style:normal;color:var(--text);font-weight:400}
+.body a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--rule);transition:color .4s,border-color .4s}
+.body a:hover{color:var(--accent);border-color:var(--accent)}
+
+
+.contact-row{display:flex;gap:clamp(16px,3vw,30px);flex-wrap:wrap;align-items:baseline;margin-bottom:clamp(10px,2vh,16px)}
+.contact-row a{font-size:clamp(13px,1.5vw,15px);letter-spacing:.06em;color:var(--text);text-decoration:none;border-bottom:1px solid var(--rule);transition:color .4s,border-color .4s;font-weight:400}
+.contact-row a:hover{color:var(--accent);border-color:var(--accent)}
+.contact-row .lbl{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--dim)}
+
+
+section.block{border-top:1px solid var(--rule);margin-top:clamp(34px,6vh,52px);padding-top:clamp(26px,4.5vh,38px)}
+
+
+.video-frame{position:relative;aspect-ratio:16/9;background:rgba(245,240,232,.04);border:1px solid var(--rule)}
+.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.caption{font-size:11px;letter-spacing:.08em;color:var(--faint);margin-top:10px}
+
+
+.spotify-frame{border-radius:12px;overflow:hidden;background:rgba(245,240,232,.04)}
+.spotify-frame iframe{display:block;width:100%;height:352px;border:0}
+.after-link{margin-top:14px}
+.after-link a{font-size:12px;letter-spacing:.1em;text-transform:lowercase;color:var(--dim);text-decoration:none;transition:color .4s}
+.after-link a:hover{color:var(--accent)}
+
+
+.record-row{display:flex;gap:clamp(14px,3vw,22px);align-items:flex-start}
+.record-row .cover{flex:0 0 auto;width:clamp(72px,16vw,110px);aspect-ratio:1;object-fit:cover;border:1px solid var(--rule);background:rgba(245,240,232,.05)}
+@media (max-width:480px){.record-row{flex-direction:column}}
+
+
+.band-line{font-size:clamp(14.5px,1.55vw,16px);line-height:1.85;color:rgba(245,240,232,.86);margin-bottom:1.1em;max-width:60ch}
+.band-line .who{color:var(--text);font-weight:400}
+
+.credits{margin:clamp(18px,3vh,26px) 0 clamp(22px,3.5vh,30px)}
+.credits .grp{display:flex;gap:clamp(12px,3vw,24px);margin-bottom:16px;flex-wrap:wrap}
+.credits .role{flex:0 0 84px;font-size:11px;letter-spacing:.06em;color:var(--faint);padding-top:3px}
+.credits .names{flex:1 1 260px;font-size:13.5px;line-height:1.8;color:var(--dim)}
+.credits .names .l-en,.credits .names .l-ja{color:inherit}
+
+
+.stages{list-style:none}
+.stages li{font-size:clamp(13.5px,1.5vw,15px);line-height:1.7;color:rgba(245,240,232,.86);padding:10px 0;border-bottom:1px solid var(--rule)}
+.stages li:last-child{border-bottom:0}
+.stages .up{color:var(--text);font-weight:400}
+.stages .up .dot{color:var(--accent)}
+
+
+.press-grid{display:flex;gap:clamp(12px,2.5vw,18px);margin-top:6px}
+.press-grid figure{flex:1 1 0;min-width:0}
+.press-grid img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block;border:1px solid var(--rule);filter:brightness(.92);transition:filter .3s}
+.press-grid a:hover img{filter:brightness(1.02)}
+.press-grid figcaption{margin-top:8px}
+.press-grid figcaption a{font-size:11px;letter-spacing:.08em;text-transform:lowercase;color:var(--dim);text-decoration:none;transition:color .4s}
+.press-grid figcaption a:hover{color:var(--accent)}
+.photo-credit{font-size:10px;letter-spacing:.1em;color:var(--faint);margin-top:10px}
+
+
+.yatara-video{display:block;width:min(100%,360px);height:auto;aspect-ratio:9/16;background:var(--bg);border:1px solid var(--rule)}
+@media (max-width:640px){.yatara-video{width:min(100%,calc(90svh * 9 / 16))}}
+
+
+.book-cta .big-mail{display:inline-block;font-size:clamp(17px,2.4vw,23px);font-weight:400;letter-spacing:.02em;color:var(--text);text-decoration:none;border-bottom:1px solid var(--rule);transition:color .4s,border-color .4s;margin-top:6px;word-break:break-all}
+.book-cta .big-mail:hover{color:var(--accent);border-color:var(--accent)}
+
+footer{
+  display:flex;justify-content:center;gap:clamp(18px,2.4vw,32px);
+  padding:clamp(16px,2.5vh,24px) var(--gutter) clamp(28px,4vh,40px);
+  border-top:1px solid var(--rule);flex-wrap:wrap
+}
+footer a{font-size:10px;letter-spacing:.28em;text-transform:lowercase;color:var(--faint);text-decoration:none;transition:color .4s}
+footer a:hover{color:var(--dim)}
+
+
+.reveal{opacity:0;transform:translateY(10px);animation:fade-up 1.4s cubic-bezier(0.16,1,0.3,1) forwards}
+.r-1{animation-delay:.10s}.r-2{animation-delay:.24s}.r-3{animation-delay:.40s}.r-4{animation-delay:.58s}
+@keyframes fade-up{to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;animation:none}}
+
+
+@media print{
+  body::before{display:none}
+  html,body{background:#fff;color:#111}
+  
+  nav.top,.live-block,.spotify-frame,footer{display:none}
+  .caption,.press-grid figcaption{display:none}
+  
+  .yatara-media{display:none}
+  
+  .after-link a{color:#111;border:0}
+  .after-link a::after{content:" — ffm.to/offsync";letter-spacing:.02em;text-transform:none}
+  .body a[href^="https://takahiroizumikawa.com/about"]::after{content:" (takahiroizumikawa.com/about)"}
+  section.block{border-color:#ddd;margin-top:22px;padding-top:16px}
+  .eyebrow,.contact-row .lbl{color:#888}
+  .lead,.name-head,.body p,.band-line,.stages li{color:#111}
+  
+  .body p .ttl,.band-line .who,.stages .up{color:#111}
+  .credits .role{color:#666}
+  .credits .names{color:#222}
+  .lead .mark{color:#b51f1f}
+  .contact-row a,.body a,.book-cta .big-mail{color:#111;border-color:#bbb}
+  .stages li{border-color:#e5e5e5}
+  .press-grid img{filter:none}
+  .photo-credit{color:#888}
+}
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <a class="wordmark" href="../index.html">© Takahiro Izumikawa</a>
+  <div class="right">
+    <div class="links">
+      <a href="../about.html">About</a>
+      <a href="../music.html">Music</a>
+      <a href="../shows.html">Shows</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <div class="lang-sw" role="group" aria-label="Language">
+      <a id="sw-en" href="?lang=en">EN</a>
+      <a id="sw-ja" href="?lang=ja" lang="ja">日本語</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="wrap">
+
+    
+    <p class="eyebrow reveal r-1"><span class="l-en">Booking</span><span class="l-ja">ブッキング</span></p>
+    <h1 class="name-head reveal r-1">Takahiro Izumikawa</h1>
+    <p class="lead reveal r-2">
+      <span class="l-en">Booking information for <span class="mark">live shows</span>.</span>
+      <span class="l-ja"><span class="nb"><span class="mark">ライブ</span>のブッキングのための</span><span class="nb">情報ページです。</span></span>
+    </p>
+    <div class="body reveal r-3">
+      <p class="l-en">Pianist and keyboardist from Japan, based in New York.<br>Latest album: <span class="ttl">Off Sync</span> (2024), made with drummer <a href="https://www.instagram.com/chrisdaddydave/" target="_blank" rel="noopener">Chris Dave</a>.</p>
+      <p class="l-ja">日本に生まれ、ニューヨークを拠点に活動するピアニスト／キーボーディスト。<br>最新アルバムはドラマーの<a href="https://www.instagram.com/chrisdaddydave/" target="_blank" rel="noopener">Chris Dave</a>と制作した『<span class="ttl">Off Sync</span>』(2024)。</p>
+    </div>
+    <div class="contact-row reveal r-4">
+      <span class="lbl"><span class="l-en">Contact</span><span class="l-ja">お問い合わせ</span></span>
+      <a href="mailto:booking@takahiroizumikawa.com?subject=Booking%20inquiry%20-%20Takahiro%20Izumikawa">booking@takahiroizumikawa.com</a>
+    </div>
+
+    
+    <section class="block live-block">
+      <h2 class="eyebrow"><span class="l-en">Live</span><span class="l-ja">ライブ</span></h2>
+      <div class="video-frame">
+        <iframe src="https://www.youtube-nocookie.com/embed/cL8hHXlqRPA?rel=0" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Live — Takahiro Izumikawa at Nublu, New York" allow="encrypted-media; picture-in-picture; web-share; fullscreen" allowfullscreen></iframe>
+      </div>
+      <p class="caption"><span class="l-en">あ (A) — live at Nublu, New York</span><span class="l-ja">あ (A) — ニューヨーク・Nublu でのライブ</span></p>
+    </section>
+
+    
+    <section class="block">
+      <h2 class="eyebrow"><span class="l-en">Listen</span><span class="l-ja">音源</span></h2>
+      <div class="spotify-frame">
+        <iframe src="https://open.spotify.com/embed/album/1rCzNaIjAyFXWlTqUEfpsn?theme=0" loading="lazy" allow="encrypted-media; clipboard-write; picture-in-picture" title="Spotify — Off Sync"></iframe>
+      </div>
+      <p class="after-link"><a href="https://ffm.to/offsync" target="_blank" rel="noopener"><span class="l-en">all platforms ↗&#xFE0E;</span><span class="l-ja">各配信サービス ↗&#xFE0E;</span></a></p>
+    </section>
+
+    
+    <section class="block">
+      <h2 class="eyebrow"><span class="l-en">The Record</span><span class="l-ja">アルバム</span></h2>
+      <div class="record-row">
+        <img class="cover" src="cover-offsync.jpg" alt="Off Sync album cover" loading="lazy">
+        <div class="body">
+          <p class="l-en">Japan's long history holds a deep spirituality and ideas, melodies all its own, and rhythms and dances strikingly close to the folk music of Africa. <span class="ttl">Off Sync</span> (2024), which embodies it, was released on his own label, access art studio.</p>
+          <p class="l-ja">日本の長い歴史には、深い精神性やコンセプト、特有のメロディ、そしてアフリカの民族音楽によく似た独自のビートや踊りがある。それを体現した『<span class="ttl">Off Sync</span>』(2024) は自社レーベル access art studio からのリリース。</p>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="block">
+      <h2 class="eyebrow"><span class="l-en">The Band</span><span class="l-ja">バンド</span></h2>
+      <p class="band-line"><span class="l-en"><span class="ttl">Off Sync</span> (2024) — album credits.</span><span class="l-ja">『<span class="ttl">Off Sync</span>』(2024) クレジット。</span></p>
+      <div class="credits">
+        <div class="grp"><span class="role"><span class="l-en">Leader</span><span class="l-ja">リーダー</span></span><span class="names"><span class="l-en">Takahiro Izumikawa — piano, vocal, bass, synth, songwriting, programming</span><span class="l-ja">泉川貴広 — ピアノ、ボーカル、ベース、シンセ、作詞、作曲、プログラミング</span></span></div>
+        <div class="grp"><span class="role"><span class="l-en">Featuring</span><span class="l-ja">参加</span></span><span class="names"><span class="l-en">Chris Dave — drums, percussion<br>Daniel Winshall — bass<br>Jenny Hong — vocal<br>Oswin Benjamin — rap<br>Takafumi Nikaido — percussion<br>Yasunobu — Japanese chorus</span><span class="l-ja">クリス・デイヴ — ドラム、パーカッション<br>ダニエル・ウィンシャル — ベース<br>ジェニー・ホン — ボーカル<br>オスウィン・ベンジャミン — ラップ<br>二階堂貴文 — パーカッション<br>康伸 — 日本語ボーカル</span></span></div>
+        <div class="grp"><span class="role"><span class="l-en">Studio</span><span class="l-ja">制作</span></span><span class="names"><span class="l-en">Recorded, mixed and produced by Takahiro Izumikawa at Access Art Studio · Mastered by Joel Kerr</span><span class="l-ja">レコーディング・ミックス・プロデュース: 泉川貴広（Access Art Studio）／マスタリング: ジョエル・カー</span></span></div>
+      </div>
+    </section>
+
+    
+    <section class="block">
+      <h2 class="eyebrow"><span class="l-en">The Venue-Only Vinyl</span><span class="l-ja">会場限定レコード</span></h2>
+      <div class="body">
+        <p class="l-en">Now booking shows around the venue-only <span class="ttl">Off Sync</span> vinyl: a 12-inch pressing, 100 copies, available at the show only. They are not sold online, so the venue has something to announce that exists nowhere else.</p>
+        <p class="l-ja">会場限定の『<span class="ttl">Off Sync</span>』レコード発売ライブをブッキング中。12インチ・100枚限定で、会場でのみ手に入ります。オンラインでは販売しないため、会場だけが告知できる要素になります。</p>
+      </div>
+    </section>
+
+    
+    <section class="block">
+      <h2 class="eyebrow"><span class="l-en">Selected Stages</span><span class="l-ja">主な出演</span></h2>
+      <ul class="stages">
+        <li class="up"><span class="dot" aria-hidden="true">●</span> <span class="l-en">Upcoming — BLUE YARD, Osaka · October 26, 2026</span><span class="l-ja">次回公演 — BLUE YARD, 大阪 · 2026年10月26日</span></li>
+        <li class="up"><span class="dot" aria-hidden="true">●</span> <span class="l-en">Upcoming — 晴れたら空に豆まいて, Tokyo · October 30, 2026</span><span class="l-ja">次回公演 — 晴れたら空に豆まいて, 東京 · 2026年10月30日</span></li>
+        <li>Joe's Pub, New York</li>
+        <li>Jazz Re:freshed, London</li>
+        <li>Cotton Club, Tokyo</li>
+        <li>Little Island, NYC</li>
+        <li><span class="l-en">and more</span><span class="l-ja">ほか</span></li>
+      </ul>
+    </section>
+
+    
+    <section class="block">
+      <h2 class="eyebrow"><span class="l-en">About</span><span class="l-ja">プロフィール</span></h2>
+      <div class="body">
+        <p class="l-en">Takahiro's music begins with the foundation of bebop — playing and recording with Vincent Herring, Cyrus Chestnut, Russell Malone, Carl Allen, and Eric Alexander. Years of gospel in New York's churches followed, and a meeting with Maurice Brown opened the door to the hip-hop world: stages with Talib Kweli, Smif-N-Wessun, Black Moon, and Kool Keith, and ensemble playing beside Anderson .Paak, Chris Dave, Keyon Harrold, Isaiah Sharkey, Jermaine Holmes, and MonoNeon. He is an Ableton, Sequential, and Hammond artist.</p>
+        <p class="l-ja">彼の音楽は、ビバップジャズからはじまる。Vincent Herring、Cyrus Chestnut、Russell Malone、Carl Allen、Eric Alexanderなどとの共演やレコーディングでジャズの歴史やスタイルを吸収する。その後、NYの教会での数年のゴスペル演奏を経て、Maurice Brownとの出会いをきっかけにヒップホップの世界に入っていく。Talib Kweli、Smif-N-Wessun、Black Moon、Kool Keithなど90年代を牽引するラッパーとの共演でグルーブや文脈を学び、Anderson .Paak、Chris Dave、Keyon Harrold、Isaiah Sharkey、Jermaine Holmes、MonoNeonなどのD'AngeloやErykah Baduの世界のプレイヤーたちとの演奏でジャズやモダンなスタイルとの融合、アンサンブルを学ぶ。彼は Ableton／Sequential／Hammond の公式アーティストでもある。</p>
+        <p><a href="https://takahiroizumikawa.com/about" target="_blank" rel="noopener"><span class="l-en">Full bio ↗&#xFE0E;</span><span class="l-ja">プロフィール全文（英語）↗&#xFE0E;</span></a></p>
+      </div>
+      <div class="press-grid">
+        <figure>
+          <a href="press-01.jpg" target="_blank" rel="noopener"><img src="press-01-thumb.jpg" alt="Takahiro Izumikawa — press photo (red)" loading="lazy"></a>
+          <figcaption><a href="press-01.jpg" download="TakahiroIzumikawa-press-01.jpg"><span class="l-en">download high-res ↓</span><span class="l-ja">高解像度をダウンロード ↓</span></a></figcaption>
+        </figure>
+        <figure>
+          <a href="press-02.jpg" target="_blank" rel="noopener"><img src="press-02-thumb.jpg" alt="Takahiro Izumikawa — press photo (monochrome)" loading="lazy"></a>
+          <figcaption><a href="press-02.jpg" download="TakahiroIzumikawa-press-02.jpg"><span class="l-en">download high-res ↓</span><span class="l-ja">高解像度をダウンロード ↓</span></a></figcaption>
+        </figure>
+      </div>
+      <p class="photo-credit">photo · Alaya Lee</p>
+    </section>
+
+    
+    <section class="block">
+      <h2 class="eyebrow">What's Next — YATARA</h2>
+      <div class="body">
+        <p class="l-en">If a jazz pianist lived in 1600s Japan. Takahiro is researching a new genre — <span class="ttl">YATARA</span> — that replaces the African rhythms at the deepest foundation of New York's music with the rhythms of 1600s Japan, using the clave as a shared key. It is already on stage: the band premiered the first YATARA piece at Cotton Club, Tokyo in June 2026, with the audience singing one part and clapping another.</p>
+        <p class="l-ja">If a jazz pianist lived in 1600s Japan. NYの音楽スタイルの最も土台になっているアフリカのリズムを、クラーベを基準に日本の1600年代のリズムに置き換えて演奏する新しいジャンル『<span class="ttl">YATARA</span>』を研究し、ライブで少しずつ形にし始めている。2026年6月、Cotton Club（東京）でバンド初演奏。客席が歌うパートと手拍子のパートも一緒に演奏した。</p>
+      </div>
+      
+      <div class="yatara-media">
+        <div class="l-en"><video class="yatara-video" src="yatara-en.mp4" poster="yatara-en-poster.webp" width="1080" height="1920" controls playsinline preload="none" aria-label="YATARA — how it works (video, 73 seconds)"></video></div>
+        <div class="l-ja"><video class="yatara-video" src="yatara-ja.mp4" poster="yatara-ja-poster.webp" width="1080" height="1920" controls playsinline preload="none" aria-label="YATARA の成り立ち（動画・73秒）"></video></div>
+      </div>
+    </section>
+
+    
+    <section class="block book-cta">
+      <h2 class="eyebrow"><span class="l-en">Contact</span><span class="l-ja">お問い合わせ</span></h2>
+      <a class="big-mail" href="mailto:booking@takahiroizumikawa.com?subject=Booking%20inquiry%20-%20Takahiro%20Izumikawa">booking@takahiroizumikawa.com</a>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <a href="mailto:booking@takahiroizumikawa.com?subject=Booking%20inquiry%20-%20Takahiro%20Izumikawa"><span class="l-en">email</span><span class="l-ja">メール</span></a>
+  <a href="https://www.instagram.com/taka808/" target="_blank" rel="noopener">instagram&nbsp;↗&#xFE0E;</a>
+  <a href="https://takahiroizumikawa.com" target="_blank" rel="noopener">takahiroizumikawa.com</a>
+</footer>
+
+<script>(function(){function setLang(l){document.documentElement.setAttribute("data-lang",l);document.documentElement.setAttribute("lang",l==="ja"?"ja":"en");document.getElementById("sw-en").classList.toggle("on",l!=="ja");document.getElementById("sw-ja").classList.toggle("on",l==="ja")}setLang(document.documentElement.getAttribute("data-lang")==="ja"?"ja":"en");document.getElementById("sw-en").addEventListener("click",function(e){e.preventDefault();setLang("en")});document.getElementById("sw-ja").addEventListener("click",function(e){e.preventDefault();setLang("ja")})})()</script>
+
+</body>
+</html>
